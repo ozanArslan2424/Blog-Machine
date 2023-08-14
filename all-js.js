@@ -1,5 +1,4 @@
 
-
 //Upload Img
 var uploaded = true;
 const cells = document.getElementsByClassName("grid-cell");
@@ -187,31 +186,31 @@ const whiteTitle = "./images/all/SVG/wtitle-prev.svg";
 const blackTitle = "./images/all/SVG/btitle-prev.svg";
 
 function addWBaslik() {
-  const firstCell = cells[0];
+  
   const wtitleimg = document.createElement("img");
   wtitleimg.classList.add("titleplaced");
   wtitleimg.setAttribute("id", "WBasID");
   wtitleimg.src = whiteTitle;
 
-  if (firstCell.querySelector(".titleplaced") !== null) {
-    firstCell.removeChild(document.getElementById("BBasID"));
-    firstCell.appendChild(wtitleimg);
+  if (cells[0].querySelector(".titleplaced") !== null) {
+    cells[0].removeChild(document.getElementById("BBasID"));
+    cells[0].appendChild(wtitleimg);
   } else {
-    firstCell.appendChild(wtitleimg);
+    cells[0].appendChild(wtitleimg);
   }
 }
 function addBBaslik() {
-  const firstCell = cells[0];
+  
   const btitleimg = document.createElement("img");
   btitleimg.classList.add("titleplaced");
   btitleimg.setAttribute("id", "BBasID");
   btitleimg.src = blackTitle;
 
-  if (firstCell.querySelector(".titleplaced") !== null) {
-    firstCell.removeChild(document.getElementById("WBasID"));
-    firstCell.appendChild(btitleimg);
+  if (cells[0].querySelector(".titleplaced") !== null) {
+    cells[0].removeChild(document.getElementById("WBasID"));
+    cells[0].appendChild(btitleimg);
   } else {
-    firstCell.appendChild(btitleimg);
+    cells[0].appendChild(btitleimg);
   }
 }
 
@@ -222,31 +221,31 @@ const whiteTpocg = "./images/all/SVG/wtpocg-prev.svg";
 const blackTpocg = "./images/all/SVG/btpocg-prev.svg";
 
 function addWTpocg() {
-  const firstCell = cells[0];
+  
   const wtpocgimg = document.createElement("img");
   wtpocgimg.classList.add("tpocgplaced");
   wtpocgimg.setAttribute("id", "WTpocgID");
   wtpocgimg.src = whiteTpocg;
 
-  if (firstCell.querySelector(".tpocgplaced") !== null) {
-    firstCell.removeChild(document.getElementById("BTpocgID"));
-    firstCell.appendChild(wtpocgimg);
+  if (cells[0].querySelector(".tpocgplaced") !== null) {
+    cells[0].removeChild(document.getElementById("BTpocgID"));
+    cells[0].appendChild(wtpocgimg);
   } else {
-    firstCell.appendChild(wtpocgimg);
+    cells[0].appendChild(wtpocgimg);
   }
 }
 function addBTpocg() {
-  const firstCell = cells[0];
+  
   const btpocgimg = document.createElement("img");
   btpocgimg.classList.add("tpocgplaced");
   btpocgimg.setAttribute("id", "BTpocgID");
   btpocgimg.src = blackTpocg;
 
-  if (firstCell.querySelector(".tpocgplaced") !== null) {
-    firstCell.removeChild(document.getElementById("WTpocgID"));
-    firstCell.appendChild(btpocgimg);
+  if (cells[0].querySelector(".tpocgplaced") !== null) {
+    cells[0].removeChild(document.getElementById("WTpocgID"));
+    cells[0].appendChild(btpocgimg);
   } else {
-    firstCell.appendChild(btpocgimg);
+    cells[0].appendChild(btpocgimg);
   }
 }
 
@@ -257,36 +256,36 @@ const whiteLonca = "./images/all/SVG/wlon-prev.svg";
 const blackLonca = "./images/all/SVG/blon-prev.svg";
 
 function addWLonca() {
-  const firstCell = cells[0];
+  
   const wloncaimg = document.createElement("img");
   wloncaimg.classList.add("loncaplaced");
   wloncaimg.setAttribute("id", "WLoncaID");
   wloncaimg.src = whiteLonca;
 
-  if (firstCell.querySelector(".loncaplaced") !== null) {
-    firstCell.removeChild(document.getElementById("BLoncaID"));
-    firstCell.appendChild(wloncaimg);
+  if (cells[0].querySelector(".loncaplaced") !== null) {
+    cells[0].removeChild(document.getElementById("BLoncaID"));
+    cells[0].appendChild(wloncaimg);
   } else {
-    firstCell.appendChild(wloncaimg);
+    cells[0].appendChild(wloncaimg);
   }
 }
 function addBLonca() {
-  const firstCell = cells[0];
+  
   const bloncaimg = document.createElement("img");
   bloncaimg.classList.add("loncaplaced");
   bloncaimg.setAttribute("id", "BLoncaID");
   bloncaimg.src = blackLonca;
 
-  if (firstCell.querySelector(".loncaplaced") !== null) {
-    firstCell.removeChild(document.getElementById("WLoncaID"));
-    firstCell.appendChild(bloncaimg);
+  if (cells[0].querySelector(".loncaplaced") !== null) {
+    cells[0].removeChild(document.getElementById("WLoncaID"));
+    cells[0].appendChild(bloncaimg);
   } else {
-    firstCell.appendChild(bloncaimg);
+    cells[0].appendChild(bloncaimg);
   }
 }
 
 //Başlık Kapak
-const firstCell = cells[0];
+
 const baslikInput = document.getElementById("baslik-text").value;
 
 function addBaslikText() {
@@ -295,28 +294,28 @@ function addBaslikText() {
   baslikOutput.setAttribute("id", "baslikTextID");
   baslikOutput.innerText = baslikInput;
 
-  if (firstCell.querySelector(".baslik-text") !== null) {
-    firstCell.removeChild(document.getElementById("baslikTextID"));
-    firstCell.appendChild(baslikOutput);
+  if (cells[0].querySelector(".baslik-text") !== null) {
+    cells[0].removeChild(document.getElementById("baslikTextID"));
+    cells[0].appendChild(baslikOutput);
   } else {
-    firstCell.appendChild(baslikOutput);
+    cells[0].appendChild(baslikOutput);
   }
 }
 
 //Yazar Kapak
 function addYazarText() {
-  const firstCell = cells[0];
+  
   const yazarInput = document.getElementById("yazar-text").value;
   const yazarOutput = document.createElement("div");
   yazarOutput.classList.add("yazar-text", "bytext");
   yazarOutput.setAttribute("id", "yazarTextID");
   yazarOutput.innerText = yazarInput;
 
-  if (firstCell.querySelector(".yazar-text") !== null) {
-    firstCell.removeChild(document.getElementById("yazarTextID"));
-    firstCell.appendChild(yazarOutput);
+  if (cells[0].querySelector(".yazar-text") !== null) {
+    cells[0].removeChild(document.getElementById("yazarTextID"));
+    cells[0].appendChild(yazarOutput);
   } else {
-    firstCell.appendChild(yazarOutput);
+    cells[0].appendChild(yazarOutput);
   }
 }
 
