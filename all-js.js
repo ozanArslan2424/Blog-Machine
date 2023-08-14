@@ -286,9 +286,10 @@ function addBLonca() {
 
 //Başlık Kapak
 
-const baslikInput = document.getElementById("baslik-text").value;
 
 function addBaslikText() {
+  
+  const baslikInput = document.getElementById("baslik-text").value;
   const baslikOutput = document.createElement("div");
   baslikOutput.classList.add("baslik-text", "bytext");
   baslikOutput.setAttribute("id", "baslikTextID");
