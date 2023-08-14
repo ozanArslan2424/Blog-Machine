@@ -295,8 +295,10 @@ function addYazarText() {
 }
 
 // Metin gir
+
 function addMetinText() {
   const metinButton = document.getElementById("metin-text");
+  const baslikInput = document.getElementById("baslik-text").value;
 
   // Metin cells
   for (let i = 1; i < cells.length; i++) {
@@ -310,7 +312,6 @@ function addMetinText() {
       }, 1500);
     } else {
       if (cell.querySelector(".bgplaced") !== null) {
-        const baslikInput = document.getElementById("baslik-text").value;
         const baslikText = document.createElement("span");
         baslikText.classList.add("oneri-baslik");
         baslikText.innerText = baslikInput;
