@@ -374,12 +374,12 @@ hr {
 .img-container {
     position: absolute;
     z-index: 3;
-    top: 275px;
+    top: 278px;
     left: 35px;
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: 118px;
-    gap: 4px;
+    gap: 5px;
 }
 
 .cover {
