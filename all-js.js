@@ -258,27 +258,6 @@ bl.addEventListener("click", () => {
 
 });
 
-// beyaz siyah arka
-// function addWBG() {
-// }
-// function addBBG() {
-// }
-//Başlık arkası
-// function addWBaslik() {
-// }
-// function addBBaslik() {
-// }
-//TPÖÇG
-// function addWTpocg() {
-// }
-// function addBTpocg() {
-// }
-//Lonca
-// function addWLonca() {
-// }
-// function addBLonca() {
-// }
-
 //Başlık Kapak
 
 
@@ -331,13 +310,18 @@ function addMetinText() {
       }, 1500);
     } else {
       if (cell.querySelector(".bgplaced") !== null) {
-
+        const baslikInput = document.getElementById("baslik-text").value;
+        const baslikText = document.createElement("span");
+        baslikText.classList.add("oneri-baslik");
+        baslikText.innerText = baslikInput;
+        baslikText.setAttribute("contenteditable", "true");
+        cells[1].appendChild(baslikText);
+        
         const metinText = document.createElement("div");
         metinText.classList.add("metinplaced");
         metinText.innerText = "Yazı buraya gelecek.";
         metinText.setAttribute("contenteditable", "true");
         metinText.setAttribute("id", "metinText");
-
         cell.appendChild(metinText);
 
         if (cell.querySelector("#BBGID") !== null) {
@@ -353,11 +337,6 @@ function addMetinText() {
     }
   }
 // başlık
-const baslikText = document.createElement("span");
-baslikText.classList.add("oneri-baslik");
-baslikText.innerText = baslikInput;
-baslikText.setAttribute("contenteditable", "true");
-cells[1].appendChild(baslikText);
 
   // "paste" event
   const metinText = document.getElementsByClassName("metinplaced");
