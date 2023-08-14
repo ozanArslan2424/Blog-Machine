@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Ozan Arslan" />
+    <meta name="description"
+        content="TPÖÇG Yayın Tasarım Ekibi'ni blog denen beladan kurtarmak için tasarlanan bir web uygulaması." />
+    <title>Blog Tasarım Makinesi</title>
+    <link rel="icon" href="./images/weblogo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="all-css.css" />
+    <script src="all-js.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+    <script src="https://kit.fontawesome.com/ffbc15d7cd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <img id="headerImgOne" src="./images/all/SVG/headerimg1.svg" />
+        <p id="credits">
+            <i>Created by <a id="OzanArslanWeb" href="#">Ozan Arslan</a>, for
+                <a id="TpocgWeb" href="https://www.tpocg.org/">TPÖÇG</a> use only. </i>&#169; 2023
+        </p>
+    </header>
+
+    <nav id="nav">
+        <div class="navbar one">
+            <a href="http://psinossa.tpocg.org/" alt="PsiNossa Dergi Web Sitesi" class="btn out">TPÖÇG</a>
+            <a href="https://www.tpocg.org/" alt="TPÖÇG Web Sitesi" class="btn out">Akıl Defterim</a>
+            <a href="https://www.tpocg.org/blog/" alt="Akıl Defterim Blog Web Sitesi" class="btn out">PsiNossa</a>
+
+        </div>
+        <div class="navbar two">
+            <!--switch 1-->
+            <a href="machine2.html" class="btn switch var1" id="oneriler">Ayın Önerileri Tasarlayıcı</a>
+            <!--switch 2-->
+            <!-- <a href="index.html" class="btn switch" id="blog">Akıl Defterim Tasarlayıcı</a> -->
+        </div>
+    </nav>
+    <hr>
+
+    <section id="buttons">
+        <div class="buttons-left horizontal">
+
+            <div class="upload-img-bg rounded">
+                <label id="uploadLabel" class="rounded red" for="uploadImgBg"><i id="upload-icon"
+                        class="fa-solid fa-upload" style="color: #ffffff;"></i><br>Görsel<br>Seç</label>
+                <input class="invis" type="file" name="uploadImgBg" id="uploadImgBg" accept="image/*"
+                    onchange="handleImageUpload(event)" />
+            </div>
+
+            <div class="vertical">
+                <button class="smallbtn rounded white" id="wbg" onclick="addWBG()"></button>
+                <button class="smallbtn rounded black" id="bbg" onclick="addBBG()"></button>
+            </div>
+
+            <div class="vertical">
+                <button class="bigbtn white rounded" id="bbaslik" onclick="addBBaslik()"></button>
+                <button class="bigbtn black rounded" id="wbaslik" onclick="addWBaslik()"></button>
+            </div>
+
+            <div class="vertical">
+                <button class="smallbtn white rounded" id="bt" onclick="addBTpocg()"></button>
+                <button class="smallbtn black rounded" id="wt" onclick="addWTpocg()"></button>
+            </div>
+
+            <div class="vertical">
+                <button class="smallbtn white rounded" id="bl" onclick="addBLonca()"></button>
+                <button class="smallbtn black rounded" id="wl" onclick="addWLonca()"></button>
+            </div>
+
+        </div>
+
+        <div class="buttons-right horizontal">
+            <div class="vertical">
+                <div class="horizontal nogap">
+                    <input type="text" class="bigbigbtn white rounded" id="baslik-text" placeholder="Başlık" />
+                    <input type="button" class="apply red rounded" id="apply-baslik" onclick="addBaslikText()" />
+                </div>
+
+                <div class="horizontal nogap">
+                    <input type="text" class="bigbigbtn white rounded" id="yazar-text" placeholder="Yazar" />
+                    <input type="button" class="apply red rounded" id="apply-yazar" onclick="addYazarText()" />
+                </div>
+            </div>
+
+            <div class="vertical">
+                <button class="midbtn metingir white rounded" id="metin-text" onclick="addMetinText()">
+                    Metin gir.
+                </button>
+
+                <div id="final" class="midbtn vertical nogap">
+                    <select name="numberOfFiles" id="numberOfFiles" class="select white">
+                        <option value="0">(Sayfa Sayısı Seç)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                    <button id="finalize" class="yazdir green">YAZDIR!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="previews">
+        <div class="grid-wrap">
+            <div id="preview-grid">
+
+                <div id="gridOne" class="grid-cell"></div>
+                <div id="gridTwo" class="grid-cell">
+                    <!-- <span class="oneri-baslik">Buraya Başlık Gelecek</span> -->
+                </div>
+                <div id="gridThree" class="grid-cell"></div>
+                <div id="gridFour" class="grid-cell"></div>
+                <div id="gridFive" class="grid-cell"></div>
+                <div id="gridSix" class="grid-cell"></div>
+                <div id="gridSeven" class="grid-cell"></div>
+                <div id="gridEight" class="grid-cell"></div>
+                <div id="gridNine" class="grid-cell"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

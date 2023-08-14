@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="435" height="507.2" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 435 507.2">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: .85;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="0" width="435" height="507.2"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g class="cls-2">
+      <g id="b-bg-prev">
+        <rect id="siyah_arka" data-name="siyah arka" x="19.2" y="22.2" width="396.5" height="462.9"/>
+      </g>
+    </g>
+  </g>
+</svg>
