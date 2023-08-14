@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color:  rgb(96, 88, 88);
+    background-color: rgb(96, 88, 88);
 }
 
 /* utility */
@@ -43,14 +43,14 @@ body {
 
 .horizontal {
     display: flex;
-    flex-direction: row;
     gap: 8px;
+    flex-direction: row;
 }
 
 .vertical {
     display: flex;
-    flex-direction: column;
     gap: 8px;
+    flex-direction: column;
 }
 
 .nogap {
@@ -69,15 +69,14 @@ body {
 
 #header {
     display: flex;
-    place-items: center;
     flex-direction: column;
     margin-bottom: 16px;
+    place-items: center;
 }
 
 
 #headerImgOne,
 #headerImgTwo {
-    /* width: 70%; */
     height: 8vw;
     margin-top: 16px;
     margin-bottom: -1%;
@@ -85,9 +84,9 @@ body {
 
 #credits,
 #credits a {
-    text-decoration: none;
     color: #ffffff60;
     font-size: 10px;
+    text-decoration: none;
 }
 
 #credits a:hover {
@@ -108,12 +107,14 @@ body {
 
 .btn:link,
 .btn:visited {
-    white-space: nowrap;
-    text-decoration: none;
-    color: rgb(40, 40, 40);
-    background-color: whitesmoke;
-    font-family: "poppins";
     padding: 4px 2vw;
+    background-color: whitesmoke;
+    color: rgb(40, 40, 40);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
     border-radius: 20px;
     transition: all 200ms;
 }
@@ -127,9 +128,10 @@ body {
 }
 
 .btn.switch {
-    color: white;
     background-color: var(--tertiary-color);
+    color: white;
 }
+
 .btn.switch.var2 {
     background-color: var(--secondary-color);
 }
@@ -157,10 +159,10 @@ hr {
 #buttons,
 #buttons-monthly {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    justify-content: center;
     margin-bottom: 24px;
+    gap: 8px;
 }
 
 #buttons-monthly {
@@ -201,7 +203,7 @@ hr {
 .select:active,
 .yazdir:active,
 .apply:active,
-.upload-img-lbl:active  {
+.upload-img-lbl:active {
     transition: 150ms ease-in-out;
     scale: 0.97;
 }
@@ -214,16 +216,18 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 136px;
     width: 64px;
+    height: 136px;
     color: white;
+    text-align: center;
 }
 
 .upload-img-bg label {
-    font-family: "Poppins";
-    padding-block: 48%;
     width: 64px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    padding-block: 48%;
 }
 
 #upload-icon {
@@ -232,29 +236,33 @@ hr {
 
 /* buttons */
 .smallbtn {
-    height: 64px;
     width: 64px;
+    height: 64px;
 }
 
 .midbtn {
-    height: 64px;
     width: 136px;
+    height: 64px;
     font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
 }
 
 .bigbtn {
-    height: 64px;
     width: 256px;
+    height: 64px;
 }
 
 .bigbigbtn {
-    height: 64px;
     width: 256px;
+    height: 64px;
     padding: 20px;
-    border-radius: 4px 0px 0px 4px;
     font-family: "Cronus Round";
     font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
     text-align: center;
+    border-radius: 4px 0px 0px 4px;
 }
 
 .select {
@@ -272,20 +280,20 @@ hr {
 }
 
 .apply {
-    height: 64px;
     width: 64px;
-    border-radius: 0px 4px 4px 0px;
+    height: 64px;
     background-image: url(./images/btn/OK-null.svg);
     background-size: 60%;
+    border-radius: 0px 4px 4px 0px;
 }
 
 .upload-img-lbl {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    color: white;
+    justify-content: center;
+    align-items: center;
     background-color: var(--primary-color);
+    color: white;
 }
 
 /* images */
@@ -296,9 +304,9 @@ hr {
 #wt,
 #bl,
 #wl {
+    background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 #bbaslik {
@@ -332,21 +340,21 @@ hr {
 
 #preview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 430px) ;
+    grid-template-columns: repeat(auto-fit, 430px);
     grid-template-rows: repeat(auto-fit, 500px);
-    gap: 8px;
-    margin-bottom: 128px;
-    margin-inline: auto ;
-    width: 100%;
     justify-content: center;
+    width: 100%;
+    margin-bottom: 128px;
+    gap: 8px;
+    margin-inline: auto;
 }
 
 .grid-cell {
     position: relative;
-    background-color: white;
-    border-radius: 8px;
     width: 430px;
     height: 500px;
+    background-color: white;
+    border-radius: 8px;
 
 }
 
@@ -362,24 +370,27 @@ hr {
 .cover-container {
     position: relative;
 }
+
 .img-container {
-    display: grid;
-    grid-template-columns: repeat(3, 120px) ;
-    grid-template-rows: 118px;
-    top: 275px;
-    left: 35px;
-    gap: 4px;
     position: absolute;
     z-index: 3;
+    top: 275px;
+    left: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: 118px;
+    gap: 4px;
 }
+
 .cover {
     position: absolute;
+    z-index: 4;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 4;
 }
+
 /* PREVIEWS */
 
 
@@ -401,67 +412,78 @@ hr {
 
 .baslik-text,
 .yazar-text {
-    font-family: "Cronus Round";
-    text-align: center;
-    color: white;
-    margin-left: 115px;
-    margin-top: 30px;
-    font-size: 20px;
     width: 295px;
     height: 28px;
+    margin-top: 30px;
+    margin-left: 115px;
+    color: white;
+    font-family: "Cronus Round";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
 }
 
 .yazar-text {
-    margin-left: 225px;
-    margin-top: 72px;
     width: 185px;
+    margin-top: 72px;
+    margin-left: 225px;
 }
 
 .metinplaced,
 .oneri-metin {
-    text-indent: 1em;
-    overflow-x: hidden;
     overflow: scroll;
-    margin: 28px;
+    overflow-x: hidden;
     width: 375px;
     height: 445px;
+    margin: 28px;
+    text-indent: 1em;
 }
-#oneriGridTwo > .oneri-metin,
-#oneriGridThree > .oneri-metin,
-#oneriGridFour > .oneri-metin,
-#oneriGridFive > .oneri-metin,
-#gridTwo > .metinplaced {
-    margin-top: 52px;
+
+#oneriGridTwo>.oneri-metin,
+#oneriGridThree>.oneri-metin,
+#oneriGridFour>.oneri-metin,
+#oneriGridFive>.oneri-metin,
+#gridTwo>.metinplaced {
     height: 420px;
+    margin-top: 52px;
 }
+
 .oneri-baslik {
     position: absolute;
-    font-family: "arial";
-    height: 20px;
     top: 24px;
     left: 28px;
+    height: 20px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
 }
+
 .metinplaced,
-.metinplaced > *,
+.metinplaced>*,
 .oneri-metin,
-.oneri-metin > *{
-    overflow-wrap: normal;
-    hyphens: auto;
+.oneri-metin>* {
     font-family: Arial;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    overflow-wrap: normal;
+    hyphens: auto;
 }
+
 .oneri-baslik {
-    font-weight: bold;
     font-size: 16px;
+    font-weight: bold;
     line-height: 1.8;
+    text-indent: 1em;
 }
 
 .img1placed,
 .img2placed,
 .img3placed {
+    background-position: center;
     background-size: cover;
     background-repeat: none;
-    background-position: center;
 }
 
 .img1placed {
@@ -483,12 +505,12 @@ hr {
 /* KEYFRAMES */
 @keyframes spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
 /* KEYFRAMES */
-
-

@@ -326,6 +326,7 @@ function addMetinText() {
         cell.appendChild(metinText);
 
         if (cell.querySelector("#BBGID") !== null) {
+          baslikText.classList.add("whitetext");
           metinText.classList.add("whitetext");
         }
       } else {
