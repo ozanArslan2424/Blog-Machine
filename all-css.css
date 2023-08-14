@@ -414,12 +414,12 @@ hr {
 .yazar-text {
     margin-left: 225px;
     margin-top: 72px;
-    /* font-size: 24px; */
     width: 185px;
 }
 
 .metinplaced,
 .oneri-metin {
+    text-indent: 1em;
     overflow-x: hidden;
     overflow: scroll;
     margin: 28px;

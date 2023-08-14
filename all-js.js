@@ -141,19 +141,16 @@ bl.addEventListener("click", () => {
 });
 
 // beyaz siyah arka
-const wbgbutton = document.getElementById(wbg);
-const bbgbutton = document.getElementById(bbg);
-const whiteBG = "./images/all/SVG/whitebg-prev.svg";
-const blackBG = "./images/all/SVG/blackbg-prev.svg";
 
 function addWBG() {
   for (let i = 1; i < cells.length; i++) {
     const cell = cells[i];
+    const whiteBG = "./images/all/SVG/whitebg-prev.svg";
     const wbgimg = document.createElement("img");
     wbgimg.classList.add("bgplaced");
     wbgimg.setAttribute("id", "WBGID");
     wbgimg.src = whiteBG;
-
+    
     if (cell.querySelector(".bgplaced") !== null) {
       cell.removeChild(document.getElementById("BBGID"));
       cell.appendChild(wbgimg);
@@ -162,9 +159,11 @@ function addWBG() {
     }
   }
 }
+
 function addBBG() {
   for (let i = 1; i < cells.length; i++) {
     const cell = cells[i];
+    const blackBG = "./images/all/SVG/blackbg-prev.svg";
     const bbgimg = document.createElement("img");
     bbgimg.classList.add("bgplaced");
     bbgimg.setAttribute("id", "BBGID");
@@ -288,7 +287,7 @@ function addBLonca() {
 
 
 function addBaslikText() {
-  
+
   const baslikInput = document.getElementById("baslik-text").value;
   const baslikOutput = document.createElement("div");
   baslikOutput.classList.add("baslik-text", "bytext");
