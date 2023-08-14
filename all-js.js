@@ -103,46 +103,7 @@ const bl = document.getElementById("bl");
 wbg.addEventListener("click", () => {
   wbg.classList.add("clicked");
   bbg.classList.remove("clicked");
-});
 
-bbg.addEventListener("click", () => {
-  bbg.classList.add("clicked");
-  wbg.classList.remove("clicked");
-});
-
-wbaslik.addEventListener("click", () => {
-  wbaslik.classList.add("clicked");
-  bbaslik.classList.remove("clicked");
-});
-
-bbaslik.addEventListener("click", () => {
-  bbaslik.classList.add("clicked");
-  wbaslik.classList.remove("clicked");
-});
-
-wt.addEventListener("click", () => {
-  wt.classList.add("clicked");
-  bt.classList.remove("clicked");
-});
-
-bt.addEventListener("click", () => {
-  bt.classList.add("clicked");
-  wt.classList.remove("clicked");
-});
-
-wl.addEventListener("click", () => {
-  wl.classList.add("clicked");
-  bl.classList.remove("clicked");
-});
-
-bl.addEventListener("click", () => {
-  bl.classList.add("clicked");
-  wl.classList.remove("clicked");
-});
-
-// beyaz siyah arka
-
-function addWBG() {
   for (let i = 1; i < cells.length; i++) {
     const cell = cells[i];
     const whiteBG = "./images/all/SVG/whitebg-prev.svg";
@@ -158,9 +119,13 @@ function addWBG() {
       cell.appendChild(wbgimg);
     }
   }
-}
 
-function addBBG() {
+});
+
+bbg.addEventListener("click", () => {
+  bbg.classList.add("clicked");
+  wbg.classList.remove("clicked");
+
   for (let i = 1; i < cells.length; i++) {
     const cell = cells[i];
     const blackBG = "./images/all/SVG/blackbg-prev.svg";
@@ -176,16 +141,14 @@ function addBBG() {
       cell.appendChild(bbgimg);
     }
   }
-}
 
-//Başlık arkası
-const wbaslikbutton = document.getElementById(wbaslik);
-const bbaslikbutton = document.getElementById(bbaslik);
-const whiteTitle = "./images/all/SVG/wtitle-prev.svg";
-const blackTitle = "./images/all/SVG/btitle-prev.svg";
+});
 
-function addWBaslik() {
+wbaslik.addEventListener("click", () => {
+  wbaslik.classList.add("clicked");
+  bbaslik.classList.remove("clicked");
   
+  const whiteTitle = "./images/all/SVG/wtitle-prev.svg";
   const wtitleimg = document.createElement("img");
   wtitleimg.classList.add("titleplaced");
   wtitleimg.setAttribute("id", "WBasID");
@@ -197,9 +160,14 @@ function addWBaslik() {
   } else {
     cells[0].appendChild(wtitleimg);
   }
-}
-function addBBaslik() {
-  
+
+});
+
+bbaslik.addEventListener("click", () => {
+  bbaslik.classList.add("clicked");
+  wbaslik.classList.remove("clicked");
+
+  const blackTitle = "./images/all/SVG/btitle-prev.svg";
   const btitleimg = document.createElement("img");
   btitleimg.classList.add("titleplaced");
   btitleimg.setAttribute("id", "BBasID");
@@ -211,30 +179,33 @@ function addBBaslik() {
   } else {
     cells[0].appendChild(btitleimg);
   }
-}
 
-//TPÖÇG
-const wtbutton = document.getElementById(wt);
-const btbutton = document.getElementById(bt);
-const whiteTpocg = "./images/all/SVG/wtpocg-prev.svg";
-const blackTpocg = "./images/all/SVG/btpocg-prev.svg";
+});
 
-function addWTpocg() {
-  
+wt.addEventListener("click", () => {
+  wt.classList.add("clicked");
+  bt.classList.remove("clicked");
+
+  const whiteTpocg = "./images/all/SVG/wtpocg-prev.svg";
   const wtpocgimg = document.createElement("img");
   wtpocgimg.classList.add("tpocgplaced");
   wtpocgimg.setAttribute("id", "WTpocgID");
   wtpocgimg.src = whiteTpocg;
-
+  
   if (cells[0].querySelector(".tpocgplaced") !== null) {
     cells[0].removeChild(document.getElementById("BTpocgID"));
     cells[0].appendChild(wtpocgimg);
   } else {
     cells[0].appendChild(wtpocgimg);
   }
-}
-function addBTpocg() {
-  
+
+});
+
+bt.addEventListener("click", () => {
+  bt.classList.add("clicked");
+  wt.classList.remove("clicked");
+
+  const blackTpocg = "./images/all/SVG/btpocg-prev.svg";
   const btpocgimg = document.createElement("img");
   btpocgimg.classList.add("tpocgplaced");
   btpocgimg.setAttribute("id", "BTpocgID");
@@ -246,30 +217,33 @@ function addBTpocg() {
   } else {
     cells[0].appendChild(btpocgimg);
   }
-}
 
-//Lonca
-const wlbutton = document.getElementById(wl);
-const blbutton = document.getElementById(bl);
-const whiteLonca = "./images/all/SVG/wlon-prev.svg";
-const blackLonca = "./images/all/SVG/blon-prev.svg";
+});
 
-function addWLonca() {
-  
+wl.addEventListener("click", () => {
+  wl.classList.add("clicked");
+  bl.classList.remove("clicked");
+
+  const whiteLonca = "./images/all/SVG/wlon-prev.svg";
   const wloncaimg = document.createElement("img");
   wloncaimg.classList.add("loncaplaced");
   wloncaimg.setAttribute("id", "WLoncaID");
   wloncaimg.src = whiteLonca;
-
+  
   if (cells[0].querySelector(".loncaplaced") !== null) {
     cells[0].removeChild(document.getElementById("BLoncaID"));
     cells[0].appendChild(wloncaimg);
   } else {
     cells[0].appendChild(wloncaimg);
   }
-}
-function addBLonca() {
-  
+
+});
+
+bl.addEventListener("click", () => {
+  bl.classList.add("clicked");
+  wl.classList.remove("clicked");
+
+  const blackLonca = "./images/all/SVG/blon-prev.svg";
   const bloncaimg = document.createElement("img");
   bloncaimg.classList.add("loncaplaced");
   bloncaimg.setAttribute("id", "BLoncaID");
@@ -281,7 +255,29 @@ function addBLonca() {
   } else {
     cells[0].appendChild(bloncaimg);
   }
-}
+
+});
+
+// beyaz siyah arka
+// function addWBG() {
+// }
+// function addBBG() {
+// }
+//Başlık arkası
+// function addWBaslik() {
+// }
+// function addBBaslik() {
+// }
+//TPÖÇG
+// function addWTpocg() {
+// }
+// function addBTpocg() {
+// }
+//Lonca
+// function addWLonca() {
+// }
+// function addBLonca() {
+// }
 
 //Başlık Kapak
 
