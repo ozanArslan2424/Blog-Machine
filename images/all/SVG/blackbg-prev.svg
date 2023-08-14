@@ -1,28 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="435" height="507.2" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 435 507.2">
-  <defs>
-    <style>
-      .cls-1, .cls-2, .cls-3 {
-        fill: none;
-      }
-
-      .cls-2 {
-        opacity: .85;
-      }
-
-      .cls-3 {
-        clip-path: url(#clippath);
-      }
-    </style>
-    <clipPath id="clippath">
-      <rect class="cls-1" y="0" width="435" height="507.2"/>
-    </clipPath>
-  </defs>
-  <g class="cls-3">
-    <g class="cls-2">
-      <g id="b-bg-prev">
-        <rect id="siyah_arka" data-name="siyah arka" x="19.2" y="22.2" width="396.5" height="462.9"/>
-      </g>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 435 507.2" style="enable-background:new 0 0 435 507.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.85;clip-path:url(#SVGID_00000085244808074793113030000010198672513058190495_);}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="435" height="507.2"/>
+	</defs>
+	<clipPath id="SVGID_00000132791627144171200850000011369648198016403091_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<rect id="siyah_arka" x="19.2" y="22.2" style="opacity:0.85;clip-path:url(#SVGID_00000132791627144171200850000011369648198016403091_);" width="396.5" height="462.9"/>
+</g>
 </svg>
