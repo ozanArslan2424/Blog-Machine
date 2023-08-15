@@ -361,3 +361,10 @@ function addMetinText() {
     });
   }
 }
+
+const slideSection = document.getElementById("phonewarning");
+const slideButton = document.getElementById("slideButton");
+
+slideButton.addEventListener("click", () => {
+      slideSection.style.display = "none"
+});

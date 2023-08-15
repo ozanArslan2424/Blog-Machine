@@ -156,21 +156,6 @@ hr {
 
 /* BUTTONS */
 
-@media (max-width: 400px) {
-    #nav {
-        transform: scale(0.9);
-    }
-    #buttons {
-        transform: scale(0.6);
-        margin-top: -60px;
-    }
-    #previews {
-        transform: scale(0.6);
-        margin-top: -970px;
-    }
-    
-}
-
 #buttons,
 #buttons-monthly {
     display: flex;
@@ -529,3 +514,72 @@ hr {
 }
 
 /* KEYFRAMES */
+
+#phonewarning{
+    display: none;
+    position: relative;
+
+}
+
+.nophones-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(121, 205, 118);
+    background-blend-mode: hue;
+    margin: 10%;
+    font-family: "Poppins";
+   }
+  
+  .nophones-h1 {
+    margin-top: 8px;
+    margin-bottom: -32px;
+    color: rgb(15, 15, 15);
+    font-size: 4em;
+  }
+  
+  .nophones-p {
+    color: black;
+    font-size: 1em;
+    text-align: center;
+    padding: 10%;
+  }
+  
+  .nophones-okbtn {
+    width: 100%;
+    height: min-content;
+    padding-block: 10px;
+    border: none;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  
+  .nophones-okbtn:hover {
+    background-color: rgba(214, 214, 214, 0.7);
+    color: black;
+  }
+  
+
+
+
+  @media (max-width: 400px) {
+    #nav {
+        transform: scale(0.9);
+    }
+    #buttons {
+        transform: scale(0.6);
+        margin-top: -60px;
+    }
+    #previews {
+        transform: scale(0.6);
+        margin-top: -970px;
+    }
+    #phonewarning{
+        display: block;
+    }
+    
+}
