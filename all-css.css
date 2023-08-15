@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
 
 :root {
     --primary-color: #a30f4e;
@@ -374,8 +374,8 @@ hr {
 .img-container {
     position: absolute;
     z-index: 3;
-    top: 278px;
-    left: 35px;
+    top: 275px;
+    left: 33px;
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: 118px;

@@ -74,11 +74,11 @@ const integerDropdown = document.getElementById("numberOfFiles");
 const finalizeButton = document.getElementById("finalize");
 
 finalizeButton.addEventListener("click", () => {
-  const numDivsToLoop = parseInt(integerDropdown.value) + 1;
+  const numDivsToLoop = parseInt(integerDropdown.value);
 
   for (let i = 0; i < numDivsToLoop; i++) {
     const gridCell = gridCells[i];
-    html2canvas(gridCell, { dpi: 300, scale: 2 }).then((canvas) => {
+    html2canvas(gridCell, { dpi: 300, scale: 3 }).then((canvas) => {
       const downloadLink = document.createElement("a");
       downloadLink.href = canvas.toDataURL("image/jpeg");
       downloadLink.download = `blog-${i}.jpg`;
