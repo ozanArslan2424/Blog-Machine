@@ -156,6 +156,21 @@ hr {
 
 /* BUTTONS */
 
+@media (max-width: 400px) {
+    #nav {
+        transform: scale(0.9);
+    }
+    #buttons {
+        transform: scale(0.6);
+        margin-top: -60px;
+    }
+    #previews {
+        transform: scale(0.6);
+        margin-top: -970px;
+    }
+    
+}
+
 #buttons,
 #buttons-monthly {
     display: flex;
