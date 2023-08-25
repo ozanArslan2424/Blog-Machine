@@ -3,6 +3,8 @@
     --secondary-color: rgb(224, 106, 132);
     --tertiary-color: rgb(93, 93, 231);
     --poppins: "poppins";
+    --border-color: #333;
+    --bubble-color: rgb(255, 255, 255);
 }
 
 * {
@@ -13,6 +15,138 @@
 body {
     background-color: rgb(96, 88, 88);
 }
+
+#tutorialSection {
+    width: 100%;
+    height: 100px;
+    /* border: 10px solid red; */
+    transition: all 0.5s ease-in-out;
+}
+
+#tutorial-wrap {
+    position: relative;
+    z-index: 5;
+    top: -32px;
+    left: 68px;
+    width: max-content;
+    height: max-content;
+    /* border: 10px solid red; */
+    transition: all 0.5s ease-in-out;
+    border-radius: 8px;
+    box-shadow: 0px 16px 8px -5px rgba(0, 0, 0, .5);
+}
+
+#tutorial {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.tut-buttons {
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    left: -10px;
+    width: max-content;
+}
+
+#tut-close,
+#tut-next {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: var(--border-color) 2px solid;
+    background-color: var(--border-color);
+    color: white;
+}
+
+#tut-close::after {
+    content: "\d7";
+    font-size: large;
+    line-height: 0.8;
+}
+
+#tut-close:hover,
+#tut-next:hover {
+    background-color: var(--bubble-color);
+    color: var(--border-color);
+    cursor: pointer;
+}
+
+.arrow-right {
+    display: inline-block;
+    padding: 3px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    margin-bottom: 1px;
+    margin-left: -2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#tut-next:hover .arrow-right {
+    border: solid var(--border-color);
+    border-width: 0 2px 2px 0;
+}
+
+.tut-bubble {
+    display: block;
+    min-width: 120px;
+    max-width: 360px;
+    min-height: 40px;
+    max-height: 120px;
+    background: var(--bubble-color);
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px 2px var(--border-color),
+        -2px 2px 0px 2px var(--border-color),
+        2px -2px 0px 2px var(--border-color),
+        -2px -2px 0px 2px var(--border-color);
+}
+
+.tut-bubble p {
+    /* border: 1px solid red; */
+    font-family: "Open Sans";
+    font-size: 0.8em;
+    text-align: left;
+    margin-block: 0.5em;
+    padding-inline: 1em;
+    word-wrap: break-word;
+    hyphens: auto;
+    transition: all 300ms ease-in;
+}
+
+.tut-handle {
+    position: relative;
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    margin-bottom: -10px;
+    background: var(--bubble-color);
+    transform: rotate(-45deg);
+    border-radius: 0 2px 0 0;
+    box-shadow: 2px -2.5px 0px 2px var(--border-color);
+}
+
+#tut-show {
+    position: absolute;
+    top: 48px;
+    left: -32px;
+    padding: 4px 8px;
+    border: #ffffff10 2px solid;
+    background-color: #00000000;
+    color: #ffffff60;
+    border-radius: 4px;
+    transform: rotate(-90deg);
+}
+
+#tut-show:hover {
+    border: #ffffff00 2px solid;
+    background-color: #ffffff40;
+    color: #fff;
+    cursor: pointer;
+}
+
+
 
 /* utility */
 .whitetext {
@@ -514,8 +648,8 @@ hr {
 /* KEYFRAMES */
 
 #phonewarning {
-    display: none;
     position: relative;
+    display: none;
 
 }
 
@@ -524,10 +658,10 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(121, 205, 118);
-    background-blend-mode: hue;
     margin: 10%;
+    background-color: rgb(121, 205, 118);
     font-family: "Poppins";
+    background-blend-mode: hue;
 }
 
 .nophones-h1 {
@@ -538,22 +672,22 @@ hr {
 }
 
 .nophones-p {
+    padding: 10%;
     color: black;
     font-size: 1em;
     text-align: center;
-    padding: 10%;
 }
 
 .nophones-okbtn {
     width: 100%;
     height: min-content;
-    padding-block: 10px;
     border: none;
     background-color: rgb(15, 15, 15);
     color: white;
-    font-weight: 600;
-    cursor: pointer;
     font-size: 2em;
+    font-weight: 600;
+    padding-block: 10px;
+    cursor: pointer;
 }
 
 .nophones-okbtn:hover {
@@ -578,6 +712,7 @@ hr {
         transform: scale(0.6);
         margin-top: -970px;
     }
+
     #previews.forMach2 {
         transform: scale(0.6);
         margin-top: -900px;
