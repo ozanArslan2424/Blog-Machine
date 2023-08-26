@@ -129,6 +129,7 @@ bbg.addEventListener("click", () => {
     const blackBG = "./images/all/SVG/blackbg-prev.svg";
     const bbgimg = document.createElement("img");
     bbgimg.classList.add("bgplaced");
+    bbgimg.style.opacity = "80%";
     bbgimg.setAttribute("id", "BBGID");
     bbgimg.src = blackBG;
 
@@ -300,11 +301,7 @@ function addMetinText() {
       }, 1500);
     } else {
       if (cell.querySelector(".bgplaced") !== null) {
-        const baslikText = document.createElement("span");
-        baslikText.classList.add("oneri-baslik");
-        baslikText.innerText = baslikInput;
-        baslikText.setAttribute("contenteditable", "true");
-        cells[1].appendChild(baslikText);
+
 
         const metinText = document.createElement("div");
         metinText.classList.add("metinplaced");
@@ -312,6 +309,12 @@ function addMetinText() {
         metinText.setAttribute("contenteditable", "true");
         metinText.setAttribute("id", "metinText");
         cell.appendChild(metinText);
+
+        const baslikText = document.createElement("span");
+        baslikText.classList.add("oneri-baslik");
+        baslikText.innerText = baslikInput;
+        baslikText.setAttribute("contenteditable", "true");
+        cells[1].appendChild(baslikText);
 
         if (cell.querySelector("#BBGID") !== null) {
           baslikText.classList.add("whitetext");
@@ -369,7 +372,7 @@ const textContentArray = [
   "Öncelikle 'Görsel Seç' yazan tuş ile blog görselini yükle.<br>Yüklediğin görsel ve yapacağın diğer değişiklikleri aşağıda canlı görebilirsin.",
   "Şimdi siyah/beyaz tuşlardan biriyle yazının arkasına koyulacak rengi seç. <br>Yazının rengi otomatik ayarlanacak.",
   "Blog görseline uygun olduğunu düşündüğün siyah/beyaz 'Akıl Defterim, TPÖÇG ve Lonca' logolarını seç.",
-  "Blogun başlığını ve yazar ismini yazıp her ikisinin de yanındaki onaylama tuşuna tıkla.<br><br><b>Not: </b>Onay tuşlarına tıklamazsan yazılar yerleştirilmez.<br>Bir hata yaparsan <b>bir sonraki adıma geçmeden</b> yazıyı değiştirip tekrar onay tuşlarına basabilirsin.",
+  "Blogun başlığını ve yazar ismini yazıp her ikisinin de yanındaki onay tuşuna tıkla.<br><br><b>Not: </b>Onay tuşlarına tıklamazsan yazılar yerleştirilmez.<br>Bir hata yaparsan <b>bir sonraki adıma geçmeden</b> yazıyı değiştirip tekrar onay tuşlarına basabilirsin.",
   "Önceki adımları sorunsuz geçtikten sonra 'Metin gir.' yazılı tuşa tıklayıp blog içeriğini yerleştirmeye başlayabilirsin.<br><br><b>Not: </b>Yazıları aşağıdaki görseller üzerinde düzenleyeceksin.",
   "Son adım olarak '(Sayfa Sayısı Seç)' yazan menüden tasarımın kaç sayfa olduğunu seçip altındaki 'Yazdır!' tuşu ile bitirebilirsin.<br><br>Kolay gelsin hocam :)",
 ];
@@ -400,10 +403,14 @@ tutorialCloseBtn.addEventListener("click", () => {
   tutorialSection.style.display = "none";
   currentPositionIndex = 0;
   tutorialWrap.style.left = "0";
+  tutorialOpenBtn.style.display = "block";
 });
 
 tutorialOpenBtn.addEventListener("click", () => {
   tutorialSection.style.display = "block";
   tutorialWrap.style.left = "60px";
   tutorialText.innerHTML = textContentArray[0];
+  setTimeout(() => {
+  tutorialOpenBtn.style.display = "none";
+  }, 4000);
 });

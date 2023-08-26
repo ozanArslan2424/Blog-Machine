@@ -128,6 +128,7 @@ body {
 }
 
 #tut-show {
+    display: none;
     position: absolute;
     top: 48px;
     left: -32px;
@@ -550,7 +551,7 @@ hr {
     margin-left: 115px;
     color: white;
     font-family: "Cronus Round";
-    font-size: 20px;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -582,6 +583,7 @@ hr {
 }
 
 .oneri-baslik {
+    font-size: 1.2em;
     position: absolute;
     top: 24px;
     left: 28px;
@@ -606,7 +608,7 @@ hr {
 .oneri-baslik {
     font-size: 16px;
     font-weight: bold;
-    line-height: 1.8;
+    line-height: 1;
     text-indent: 1em;
 }
 
