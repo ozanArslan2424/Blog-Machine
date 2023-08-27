@@ -1,7 +1,12 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementsByTagName("input").value = "";
+});
+
 //Upload Img
 var uploaded = true;
 const cells = document.getElementsByClassName("grid-cell");
 const uploadIcon = document.getElementById("upload-icon");
+const resetBtn = document.getElementById("reset");
 
 function handleImageUpload(event) {
   const file = event.target.files[0];
@@ -29,6 +34,7 @@ function displayImage(imageUrl) {
       setTimeout(() => {
         uploadIcon.style.animation = "none";
       }, 1000);
+      resetBtn.style.display = "block";
     }
   }
 }
@@ -301,8 +307,6 @@ function addMetinText() {
       }, 1500);
     } else {
       if (cell.querySelector(".bgplaced") !== null) {
-
-
         const metinText = document.createElement("div");
         metinText.classList.add("metinplaced");
         metinText.innerText = "Yazı buraya gelecek.";
@@ -396,6 +400,7 @@ tutorialNextBtn.addEventListener("click", () => {
     currentPositionIndex++;
   } else {
     tutorialSection.style.display = "none";
+    tutorialOpenBtn.style.display = "block";
   }
 });
 
@@ -410,7 +415,21 @@ tutorialOpenBtn.addEventListener("click", () => {
   tutorialSection.style.display = "block";
   tutorialWrap.style.left = "60px";
   tutorialText.innerHTML = textContentArray[0];
-  setTimeout(() => {
   tutorialOpenBtn.style.display = "none";
-  }, 4000);
+});
+
+resetBtn.addEventListener("click", () => {
+  for (let i = 0; i < cells.length; i++) {
+    const cell = cells[i];
+    cell.innerHTML = "";
+    wbg.classList.remove("clicked");
+    bbg.classList.remove("clicked");
+    wbaslik.classList.remove("clicked");
+    bbaslik.classList.remove("clicked");
+    wt.classList.remove("clicked");
+    bt.classList.remove("clicked");
+    wl.classList.remove("clicked");
+    bt.classList.remove("clicked");
+    resetBtn.style.display = "none";
+  }
 });

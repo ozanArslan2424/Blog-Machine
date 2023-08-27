@@ -1,7 +1,8 @@
 :root {
+    --body-color: #6a7152;
     --primary-color: #a30f4e;
-    --secondary-color: rgb(224, 106, 132);
-    --tertiary-color: rgb(93, 93, 231);
+    --secondary-color: #3f4238;
+    --tertiary-color: #797d62;
     --poppins: "poppins";
     --border-color: #333;
     --bubble-color: rgb(255, 255, 255);
@@ -13,7 +14,8 @@
 }
 
 body {
-    background-color: rgb(96, 88, 88);
+    /* background: linear-gradient(20deg, #8e6d5d 10%, #aa8775 20%, #8e6d5d 50%, #aa8775 100%); */
+    background-color: var(--body-color);
 }
 
 #tutorialSection {
@@ -133,14 +135,28 @@ body {
     top: 48px;
     left: -32px;
     padding: 4px 8px;
-    border: #ffffff10 2px solid;
+    border: #ffffff20 2px solid;
     background-color: #00000000;
-    color: #ffffff60;
+    color: #ffffff80;
     border-radius: 4px;
     transform: rotate(-90deg);
 }
 
-#tut-show:hover {
+#reset {
+    display: none;
+    position: absolute;
+    top: 24px;
+    right: -8px;
+    padding: 4px 8px;
+    border: #ffffff20 2px solid;
+    background-color: #00000000;
+    color: #ffffff80;
+    border-radius: 4px;
+    transform: rotate(90deg);
+}
+
+#tut-show:hover,
+#reset:hover {
     border: #ffffff00 2px solid;
     background-color: #ffffff40;
     color: #fff;
@@ -168,10 +184,6 @@ body {
 
 .red {
     background-color: var(--primary-color);
-}
-
-.green {
-    background-color: rgb(54, 224, 2);
 }
 
 .horizontal {
@@ -261,7 +273,7 @@ body {
 }
 
 .btn.switch {
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     color: white;
 }
 
@@ -270,7 +282,7 @@ body {
 }
 
 .btn.switch:hover {
-    box-shadow: 0 1px 8px #ffffff60;
+    box-shadow: 0 1px 8px var(--tertiary-color);
 }
 
 .btn:active {
@@ -321,7 +333,7 @@ hr {
 .bigbtn:hover,
 .apply:hover,
 .upload-img-lbl:hover {
-    box-shadow: 0px 0px 4px 2px rgba(225, 225, 225, 0.5);
+    box-shadow: 0px 0px 4px 2px var(--border-color);
 }
 
 .metingir:hover {
@@ -340,9 +352,6 @@ hr {
     transition: 150ms ease-in-out;
     scale: 0.97;
 }
-
-
-
 
 /* upload */
 .upload-img-bg {
@@ -410,6 +419,7 @@ hr {
     width: 136px;
     height: 50%;
     border-radius: 0px 0px 4px 4px;
+    background-color: rgb(54, 224, 2);
 }
 
 .apply {
@@ -466,9 +476,6 @@ hr {
     background-image: url(./images/btn/lonca-b.svg);
 }
 
-/* BUTTONS */
-
-
 /* PREVIEWS */
 
 #preview-grid {
@@ -488,7 +495,6 @@ hr {
     height: 500px;
     background-color: white;
     border-radius: 8px;
-
 }
 
 .oneri.grid-cell.first {
