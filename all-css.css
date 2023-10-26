@@ -6,6 +6,11 @@
     --poppins: "poppins";
     --border-color: #333;
     --bubble-color: rgb(255, 255, 255);
+    --left-radius: 0.5rem 0rem 0rem 0.5rem;
+    --right-radius: 0rem 0.5rem 0.5rem 0rem;
+    --top-radius: 0.5rem 0.5rem 0rem 0rem;
+    --bottom-radius: 0rem 0rem 0.5rem 0.5rem;
+    --button-size: 4rem;
 }
 
 * {
@@ -14,7 +19,6 @@
 }
 
 body {
-    /* background: linear-gradient(20deg, #8e6d5d 10%, #aa8775 20%, #8e6d5d 50%, #aa8775 100%); */
     background-color: var(--body-color);
 }
 
@@ -61,7 +65,7 @@ body {
     border-radius: 50%;
     border: var(--border-color) 0.125rem solid;
     background-color: var(--border-color);
-    color: white;
+    color: whitesmoke;
 }
 
 #tut-close::after {
@@ -81,7 +85,7 @@ body {
 .arrow-right {
     display: inline-block;
     padding: 0.1875rem;
-    border: solid white;
+    border: solid whitesmoke;
     border-width: 0 0.125rem 0.125rem 0;
     margin-bottom: 0.0625rem;
     margin-left: -0.125rem;
@@ -96,11 +100,11 @@ body {
 
 .tut-bubble {
     display: block;
-    padding: 0.8rem 1rem;
     min-width: 7.5rem;
     max-width: 22.5rem;
     min-height: 2.5rem;
     max-height: 7.5rem;
+    padding: 0.8rem 1rem;
     background: var(--bubble-color);
     border-radius: 0.25rem;
     box-shadow: 0.125rem 0.125rem 0rem 0.125rem var(--border-color),
@@ -110,7 +114,6 @@ body {
 }
 
 .tut-bubble p {
-    /* border: 0.0625rem solid red; */
     font-family: "Open Sans";
     font-size: 0.8em;
     text-align: left;
@@ -134,10 +137,10 @@ body {
 }
 
 #tut-show {
-    display: none;
     position: absolute;
     top: 3rem;
     left: -2rem;
+    display: none;
     padding: 0.25rem 0.5rem;
     border: #ffffff20 0.125rem solid;
     background-color: #00000000;
@@ -147,10 +150,10 @@ body {
 }
 
 #reset {
-    display: none;
     position: absolute;
     top: 1.5rem;
     right: -0.5rem;
+    display: none;
     padding: 0.25rem 0.5rem;
     border: #ffffff20 0.125rem solid;
     background-color: #00000000;
@@ -163,7 +166,7 @@ body {
 #reset:hover {
     border: #ffffff00 0.125rem solid;
     background-color: #ffffff40;
-    color: #fff;
+    color: whitesmoke;
     cursor: pointer;
 }
 
@@ -171,11 +174,11 @@ body {
 
 /* utility */
 .whitetext {
-    color: white;
+    color: whitesmoke;
 }
 
 .rounded {
-    border-radius: 0.25rem;
+    border-radius: .5rem;
 }
 
 .black {
@@ -183,7 +186,7 @@ body {
 }
 
 .white {
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 
 .red {
@@ -239,7 +242,7 @@ body {
 }
 
 #credits a:hover {
-    color: #ffffff;
+    color: whitesmoke;
 }
 
 /* HEADER */
@@ -278,7 +281,7 @@ body {
 
 .btn.switch {
     background-color: var(--secondary-color);
-    color: white;
+    color: whitesmoke;
 }
 
 .btn.switch.var2 {
@@ -295,7 +298,7 @@ body {
 
 hr {
     width: 80%;
-    border: white 0.0625rem solid;
+    border: whitesmoke 0.0625rem solid;
     margin-bottom: 1.5rem;
 }
 
@@ -362,14 +365,14 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 8.5rem;
-    color: white;
+    width: var(--button-size);
+    height: calc(var(--button-size) * 2 + .5rem);
+    color: whitesmoke;
     text-align: center;
 }
 
 .upload-img-bg label {
-    width: 4rem;
+    width: var(--button-size);
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -382,56 +385,57 @@ hr {
 
 /* buttons */
 .smallbtn {
-    width: 4rem;
-    height: 4rem;
+    width: var(--button-size);
+    height: var(--button-size);
 }
 
 .midbtn {
-    width: 8.5rem;
-    height: 4rem;
+    width: calc(var(--button-size) * 2 + .5rem);
+    height: var(--button-size);
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
 }
 
 .bigbtn {
-    width: 16rem;
-    height: 4rem;
+    width: calc(var(--button-size) * 4);
+    height: var(--button-size);
 }
 
 .bigbigbtn {
-    width: 16rem;
-    height: 4rem;
+    width: calc(var(--button-size) * 4);
+    height: var(--button-size);
     padding: 1.25rem;
     font-family: "Cronus Round";
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    border-radius: var(--left-radius);
 }
 
 .select {
-    width: 8.5rem;
+    width: calc(var(--button-size) * 2 + .5rem);
     height: 50%;
-    border-radius: 0.25rem 0.25rem 0rem 0rem;
+    border-radius: var(--top-radius);
     font-size: 0.8em;
     text-align: center;
 }
 
 .yazdir {
-    width: 8.5rem;
+    width: calc(var(--button-size) * 2 + .5rem);
     height: 50%;
-    border-radius: 0rem 0rem 0.25rem 0.25rem;
-    background-color: rgb(54, 224, 2);
+    border-radius: var(--bottom-radius);
+    background-color: var(--primary-color);
+    color: whitesmoke;
 }
 
 .apply {
-    width: 4rem;
-    height: 4rem;
+    width: var(--button-size);
+    height: var(--button-size);
     background-image: url(./images/btn/OK-null.svg);
     background-size: 60%;
-    border-radius: 0rem 0.25rem 0.25rem 0rem;
+    border-radius: var(--right-radius);
 }
 
 .upload-img-lbl {
@@ -440,7 +444,7 @@ hr {
     justify-content: center;
     align-items: center;
     background-color: var(--primary-color);
-    color: white;
+    color: whitesmoke;
 }
 
 /* images */
@@ -497,7 +501,7 @@ hr {
     position: relative;
     width: 26.875rem;
     height: 31.25rem;
-    background-color: white;
+    background-color: whitesmoke;
     border-radius: 0.5rem;
 }
 
@@ -559,7 +563,7 @@ hr {
     height: 1.75rem;
     margin-top: 1.875rem;
     margin-left: 7.1875rem;
-    color: white;
+    color: whitesmoke;
     font-family: "Cronus Round";
     font-size: 1.2em;
     font-style: normal;
@@ -593,12 +597,12 @@ hr {
 }
 
 .oneri-baslik {
-    font-size: 1.2em;
     position: absolute;
     top: 1.5rem;
     left: 1.75rem;
     height: 1.25rem;
     font-family: "Arial";
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 400;
 }
@@ -695,7 +699,7 @@ hr {
     height: min-content;
     border: none;
     background-color: rgb(15, 15, 15);
-    color: white;
+    color: whitesmoke;
     font-size: 2em;
     font-weight: 600;
     padding-block: 0.625rem;
