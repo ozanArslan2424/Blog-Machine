@@ -222,7 +222,7 @@ body {
 #header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     place-items: center;
 }
 
@@ -251,15 +251,15 @@ body {
 
 .navbar {
     display: flex;
-    gap: 1.5rem;
+    gap: .5rem;
     justify-content: center;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .btn:link,
 .btn:visited {
-    padding: 0.25rem 2vw;
+    padding: 0.25rem 1rem;
     background-color: whitesmoke;
     color: rgb(40, 40, 40);
     font-family: "Poppins";
@@ -267,7 +267,7 @@ body {
     font-weight: 400;
     text-decoration: none;
     white-space: nowrap;
-    border-radius: 1.25rem;
+    border-radius: .5rem;
     transition: all 200ms;
 }
 
@@ -297,9 +297,9 @@ body {
 }
 
 hr {
-    width: 80%;
-    border: whitesmoke 0.0625rem solid;
-    margin-bottom: 1.5rem;
+    width: 90%;
+    border: var(--secondary-color) 0.0625rem solid;
+    margin-block: 1.25rem;
 }
 
 /* NAV */
@@ -403,7 +403,7 @@ hr {
 }
 
 .bigbigbtn {
-    width: calc(var(--button-size) * 4);
+    width: calc(var(--button-size) * 3);
     height: var(--button-size);
     padding: 1.25rem;
     font-family: "Cronus Round";
