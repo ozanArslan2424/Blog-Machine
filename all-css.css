@@ -20,22 +20,20 @@ body {
 
 #tutorialSection {
     width: 100%;
-    height: 100px;
-    /* border: 10px solid red; */
+    height: 6.25rem;
     transition: all 0.5s ease-in-out;
 }
 
 #tutorial-wrap {
     position: relative;
     z-index: 5;
-    top: -32px;
-    left: 68px;
+    top: -2rem;
+    left: 4.25rem;
     width: max-content;
     height: max-content;
-    /* border: 10px solid red; */
     transition: all 0.5s ease-in-out;
-    border-radius: 8px;
-    box-shadow: 0px 16px 8px -5px rgba(0, 0, 0, .5);
+    border-radius: 0.5rem;
+    box-shadow: 0rem 1rem 0.5rem -0.3125rem rgba(0, 0, 0, .5);
 }
 
 #tutorial {
@@ -44,20 +42,24 @@ body {
     align-items: center;
 }
 
+#tutorialText {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .tut-buttons {
     position: relative;
     z-index: 2;
-    top: 20px;
-    left: -10px;
+    top: 1.5rem;
+    left: -0.625rem;
     width: max-content;
 }
 
 #tut-close,
 #tut-next {
-    width: 24px;
-    height: 24px;
+    width: 1.8rem;
+    height: 1.8rem;
     border-radius: 50%;
-    border: var(--border-color) 2px solid;
+    border: var(--border-color) 0.125rem solid;
     background-color: var(--border-color);
     color: white;
 }
@@ -66,6 +68,7 @@ body {
     content: "\d7";
     font-size: large;
     line-height: 0.8;
+    vertical-align: middle;
 }
 
 #tut-close:hover,
@@ -77,36 +80,37 @@ body {
 
 .arrow-right {
     display: inline-block;
-    padding: 3px;
+    padding: 0.1875rem;
     border: solid white;
-    border-width: 0 2px 2px 0;
-    margin-bottom: 1px;
-    margin-left: -2px;
+    border-width: 0 0.125rem 0.125rem 0;
+    margin-bottom: 0.0625rem;
+    margin-left: -0.125rem;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
 #tut-next:hover .arrow-right {
     border: solid var(--border-color);
-    border-width: 0 2px 2px 0;
+    border-width: 0 0.125rem 0.125rem 0;
 }
 
 .tut-bubble {
     display: block;
-    min-width: 120px;
-    max-width: 360px;
-    min-height: 40px;
-    max-height: 120px;
+    padding: 0.8rem 1rem;
+    min-width: 7.5rem;
+    max-width: 22.5rem;
+    min-height: 2.5rem;
+    max-height: 7.5rem;
     background: var(--bubble-color);
-    border-radius: 4px;
-    box-shadow: 2px 2px 0px 2px var(--border-color),
-        -2px 2px 0px 2px var(--border-color),
-        2px -2px 0px 2px var(--border-color),
-        -2px -2px 0px 2px var(--border-color);
+    border-radius: 0.25rem;
+    box-shadow: 0.125rem 0.125rem 0rem 0.125rem var(--border-color),
+        -0.125rem 0.125rem 0rem 0.125rem var(--border-color),
+        0.125rem -0.125rem 0rem 0.125rem var(--border-color),
+        -0.125rem -0.125rem 0rem 0.125rem var(--border-color);
 }
 
 .tut-bubble p {
-    /* border: 1px solid red; */
+    /* border: 0.0625rem solid red; */
     font-family: "Open Sans";
     font-size: 0.8em;
     text-align: left;
@@ -120,44 +124,44 @@ body {
 .tut-handle {
     position: relative;
     z-index: 0;
-    width: 20px;
-    height: 20px;
-    margin-bottom: -10px;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-bottom: -0.625rem;
     background: var(--bubble-color);
     transform: rotate(-45deg);
-    border-radius: 0 2px 0 0;
-    box-shadow: 2px -2.5px 0px 2px var(--border-color);
+    border-radius: 0 0.125rem 0 0;
+    box-shadow: 0.125rem -0.125rem 0rem 0.0625rem var(--border-color);
 }
 
 #tut-show {
     display: none;
     position: absolute;
-    top: 48px;
-    left: -32px;
-    padding: 4px 8px;
-    border: #ffffff20 2px solid;
+    top: 3rem;
+    left: -2rem;
+    padding: 0.25rem 0.5rem;
+    border: #ffffff20 0.125rem solid;
     background-color: #00000000;
     color: #ffffff80;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     transform: rotate(-90deg);
 }
 
 #reset {
     display: none;
     position: absolute;
-    top: 24px;
-    right: -8px;
-    padding: 4px 8px;
-    border: #ffffff20 2px solid;
+    top: 1.5rem;
+    right: -0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: #ffffff20 0.125rem solid;
     background-color: #00000000;
     color: #ffffff80;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     transform: rotate(90deg);
 }
 
 #tut-show:hover,
 #reset:hover {
-    border: #ffffff00 2px solid;
+    border: #ffffff00 0.125rem solid;
     background-color: #ffffff40;
     color: #fff;
     cursor: pointer;
@@ -171,7 +175,7 @@ body {
 }
 
 .rounded {
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 .black {
@@ -188,13 +192,13 @@ body {
 
 .horizontal {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     flex-direction: row;
 }
 
 .vertical {
     display: flex;
-    gap: 8px;
+    gap: 0.5rem;
     flex-direction: column;
 }
 
@@ -207,7 +211,7 @@ body {
 }
 
 .clicked {
-    border: 1.5px solid rgb(54, 224, 2);
+    border: 0.0938rem solid rgb(54, 224, 2);
 }
 
 /* HEADER */
@@ -215,7 +219,7 @@ body {
 #header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     place-items: center;
 }
 
@@ -223,14 +227,14 @@ body {
 #headerImgOne,
 #headerImgTwo {
     height: 8vw;
-    margin-top: 16px;
+    margin-top: 1rem;
     margin-bottom: -1%;
 }
 
 #credits,
 #credits a {
     color: #ffffff60;
-    font-size: 10px;
+    font-size: 0.625rem;
     text-decoration: none;
 }
 
@@ -244,15 +248,15 @@ body {
 
 .navbar {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     justify-content: center;
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 .btn:link,
 .btn:visited {
-    padding: 4px 2vw;
+    padding: 0.25rem 2vw;
     background-color: whitesmoke;
     color: rgb(40, 40, 40);
     font-family: "Poppins";
@@ -260,7 +264,7 @@ body {
     font-weight: 400;
     text-decoration: none;
     white-space: nowrap;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     transition: all 200ms;
 }
 
@@ -269,7 +273,7 @@ body {
 }
 
 .btn.out:hover {
-    box-shadow: 0 1px 8px var(--secondary-color);
+    box-shadow: 0 0.0625rem 0.5rem var(--secondary-color);
 }
 
 .btn.switch {
@@ -282,7 +286,7 @@ body {
 }
 
 .btn.switch:hover {
-    box-shadow: 0 1px 8px var(--tertiary-color);
+    box-shadow: 0 0.0625rem 0.5rem var(--tertiary-color);
 }
 
 .btn:active {
@@ -291,8 +295,8 @@ body {
 
 hr {
     width: 80%;
-    border: white 1px solid;
-    margin-bottom: 24px;
+    border: white 0.0625rem solid;
+    margin-bottom: 1.5rem;
 }
 
 /* NAV */
@@ -306,12 +310,12 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 24px;
-    gap: 8px;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
 }
 
 #buttons-monthly {
-    gap: 16px !important;
+    gap: 1rem !important;
 }
 
 /* hover effects */
@@ -333,7 +337,7 @@ hr {
 .bigbtn:hover,
 .apply:hover,
 .upload-img-lbl:hover {
-    box-shadow: 0px 0px 4px 2px var(--border-color);
+    box-shadow: 0rem 0rem 0.25rem 0.125rem var(--border-color);
 }
 
 .metingir:hover {
@@ -358,14 +362,14 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 64px;
-    height: 136px;
+    width: 4rem;
+    height: 8.5rem;
     color: white;
     text-align: center;
 }
 
 .upload-img-bg label {
-    width: 64px;
+    width: 4rem;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -373,61 +377,61 @@ hr {
 }
 
 #upload-icon {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 /* buttons */
 .smallbtn {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
 }
 
 .midbtn {
-    width: 136px;
-    height: 64px;
+    width: 8.5rem;
+    height: 4rem;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
 }
 
 .bigbtn {
-    width: 256px;
-    height: 64px;
+    width: 16rem;
+    height: 4rem;
 }
 
 .bigbigbtn {
-    width: 256px;
-    height: 64px;
-    padding: 20px;
+    width: 16rem;
+    height: 4rem;
+    padding: 1.25rem;
     font-family: "Cronus Round";
-    font-size: 32px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
 }
 
 .select {
-    width: 136px;
+    width: 8.5rem;
     height: 50%;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
     font-size: 0.8em;
     text-align: center;
 }
 
 .yazdir {
-    width: 136px;
+    width: 8.5rem;
     height: 50%;
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
     background-color: rgb(54, 224, 2);
 }
 
 .apply {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
     background-image: url(./images/btn/OK-null.svg);
     background-size: 60%;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
 }
 
 .upload-img-lbl {
@@ -480,21 +484,21 @@ hr {
 
 #preview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 430px);
-    grid-template-rows: repeat(auto-fit, 500px);
+    grid-template-columns: repeat(auto-fit, 26.875rem);
+    grid-template-rows: repeat(auto-fit, 31.25rem);
     justify-content: center;
     width: 100%;
-    margin-bottom: 128px;
-    gap: 8px;
+    margin-bottom: 8rem;
+    gap: 0.5rem;
     margin-inline: auto;
 }
 
 .grid-cell {
     position: relative;
-    width: 430px;
-    height: 500px;
+    width: 26.875rem;
+    height: 31.25rem;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
 .oneri.grid-cell.first {
@@ -513,12 +517,12 @@ hr {
 .img-container {
     position: absolute;
     z-index: 3;
-    top: 275px;
-    left: 33px;
+    top: 17.1875rem;
+    left: 2.0625rem;
     display: grid;
-    grid-template-columns: repeat(3, 120px);
-    grid-template-rows: 118px;
-    gap: 5px;
+    grid-template-columns: repeat(3, 7.5rem);
+    grid-template-rows: 7.375rem;
+    gap: 0.3125rem;
 }
 
 .cover {
@@ -545,16 +549,16 @@ hr {
 .yazar-text,
 .metinplaced {
     position: absolute;
-    width: 430px;
-    height: 500px;
+    width: 26.875rem;
+    height: 31.25rem;
 }
 
 .baslik-text,
 .yazar-text {
-    width: 295px;
-    height: 28px;
-    margin-top: 30px;
-    margin-left: 115px;
+    width: 18.4375rem;
+    height: 1.75rem;
+    margin-top: 1.875rem;
+    margin-left: 7.1875rem;
     color: white;
     font-family: "Cronus Round";
     font-size: 1.2em;
@@ -564,18 +568,18 @@ hr {
 }
 
 .yazar-text {
-    width: 185px;
-    margin-top: 72px;
-    margin-left: 225px;
+    width: 11.5625rem;
+    margin-top: 4.5rem;
+    margin-left: 14.0625rem;
 }
 
 .metinplaced,
 .oneri-metin {
     overflow: scroll;
     overflow-x: hidden;
-    width: 375px;
-    height: 445px;
-    margin: 28px;
+    width: 23.4375rem;
+    height: 27.8125rem;
+    margin: 1.75rem;
     text-indent: 1em;
 }
 
@@ -584,16 +588,16 @@ hr {
 #oneriGridFour>.oneri-metin,
 #oneriGridFive>.oneri-metin,
 #gridTwo>.metinplaced {
-    height: 420px;
-    margin-top: 52px;
+    height: 26.25rem;
+    margin-top: 3.25rem;
 }
 
 .oneri-baslik {
     font-size: 1.2em;
     position: absolute;
-    top: 24px;
-    left: 28px;
-    height: 20px;
+    top: 1.5rem;
+    left: 1.75rem;
+    height: 1.25rem;
     font-family: "Arial";
     font-style: normal;
     font-weight: 400;
@@ -604,7 +608,7 @@ hr {
 .oneri-metin,
 .oneri-metin>* {
     font-family: Arial;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-style: normal;
     font-weight: 400;
     overflow-wrap: normal;
@@ -612,7 +616,7 @@ hr {
 }
 
 .oneri-baslik {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1;
     text-indent: 1em;
@@ -673,8 +677,8 @@ hr {
 }
 
 .nophones-h1 {
-    margin-top: 8px;
-    margin-bottom: -32px;
+    margin-top: 0.5rem;
+    margin-bottom: -2rem;
     color: rgb(15, 15, 15);
     font-size: 4em;
 }
@@ -694,7 +698,7 @@ hr {
     color: white;
     font-size: 2em;
     font-weight: 600;
-    padding-block: 10px;
+    padding-block: 0.625rem;
     cursor: pointer;
 }
 
@@ -706,24 +710,24 @@ hr {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 25rem) {
     #nav {
         transform: scale(0.9);
     }
 
     #buttons {
         transform: scale(0.6);
-        margin-top: -60px;
+        margin-top: -3.75rem;
     }
 
     #previews.forIndex {
         transform: scale(0.6);
-        margin-top: -970px;
+        margin-top: -60.625rem;
     }
 
     #previews.forMach2 {
         transform: scale(0.6);
-        margin-top: -900px;
+        margin-top: -56.25rem;
 
     }
 
