@@ -295,44 +295,45 @@ function addMetinText() {
   const metinButton = document.getElementById("metin-text");
   const baslikInput = document.getElementById("baslik-text").value;
 
-  // Metin cells
-  for (let i = 1; i < cells.length; i++) {
-    const cell = cells[i];
-
-    if (cell.querySelector(".metinplaced") !== null) {
-      metinButton.innerHTML =
-        "<span class='error'> Yazıya tıkla ve düzenle! <span>";
-      setTimeout(() => {
-        metinButton.innerHTML = "Metin gir.";
-      }, 1500);
-    } else {
-      if (cell.querySelector(".bgplaced") !== null) {
+  if (cells[1].querySelector(".metinplaced") == null) {
+    for (let i = 1; i < cells.length; i++) {
+      const cell = cells[i];
+      // if (cell.querySelector(".bgplaced") !== null) {
         const metinText = document.createElement("div");
         metinText.classList.add("metinplaced");
         metinText.innerText = "Yazı buraya gelecek.";
         metinText.setAttribute("contenteditable", "true");
         metinText.setAttribute("id", "metinText");
         cell.appendChild(metinText);
-
-        const baslikText = document.createElement("span");
-        baslikText.classList.add("oneri-baslik");
-        baslikText.innerText = baslikInput;
-        baslikText.setAttribute("contenteditable", "true");
-        cells[1].appendChild(baslikText);
-
         if (cell.querySelector("#BBGID") !== null) {
-          baslikText.classList.add("whitetext");
           metinText.classList.add("whitetext");
         }
-      } else {
-        metinButton.innerHTML =
-          "<span class='error'> Önce arka plan rengi seç! <span>";
-        setTimeout(() => {
-          metinButton.innerHTML = "Metin gir.";
-        }, 1500);
-      }
+      // } else {
+      //   metinButton.innerHTML =
+      //     "<span class='error'> Önce arka plan rengi seç! <span>";
+      //   setTimeout(() => {
+      //     metinButton.innerHTML = "Metin gir.";
+      //   }, 1500);
+      // }
     }
+    const baslikText = document.createElement("span");
+    baslikText.classList.add("oneri-baslik");
+    baslikText.innerText = baslikInput;
+    baslikText.setAttribute("contenteditable", "true");
+    cells[1].appendChild(baslikText);
+    if (cells[1].querySelector("#BBGID") !== null) {
+      baslikText.classList.add("whitetext");
+    }
+  } else {
+    metinButton.innerHTML =
+      "<span class='error'> Yazıya tıkla ve düzenle! <span>";
+    setTimeout(() => {
+      metinButton.innerHTML = "Metin gir.";
+    }, 1500);
   }
+
+  // Metin cells
+
   // başlık
 
   // "paste" event

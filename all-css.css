@@ -60,19 +60,13 @@ body {
 
 #tut-close,
 #tut-next {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     border: var(--border-color) 0.125rem solid;
     background-color: var(--border-color);
     color: whitesmoke;
-}
-
-#tut-close::after {
-    content: "\d7";
-    font-size: large;
-    line-height: 0.8;
-    vertical-align: middle;
+    font-weight: bold;
 }
 
 #tut-close:hover,
