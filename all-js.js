@@ -2,11 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementsByTagName("input").value = "";
 });
 
-//Upload Img
 var uploaded = true;
 const cells = document.getElementsByClassName("grid-cell");
-const uploadIcon = document.getElementById("upload-icon");
-const resetBtn = document.getElementById("reset");
+// const gridCells = document.querySelectorAll(".grid-cell");
 
 function handleImageUpload(event) {
   const file = event.target.files[0];
@@ -20,10 +18,10 @@ function handleImageUpload(event) {
   reader.readAsDataURL(file);
 }
 function displayImage(imageUrl) {
-  // Loop through
   for (let i = 0; i < cells.length; i++) {
     const cell = cells[i];
     if (uploaded) {
+      const uploadIcon = document.getElementById("upload-icon");
       cell.innerHTML = "";
       const img = document.createElement("img");
       img.classList.add("imgplaced");
@@ -39,8 +37,8 @@ function displayImage(imageUrl) {
   }
 }
 
-//oku dinle izle
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  
   const imageUpload1 = document.getElementById("uploadImgOne");
   const imageUpload2 = document.getElementById("uploadImgTwo");
   const imageUpload3 = document.getElementById("uploadImgThree");
@@ -73,38 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Yazdır
-const gridCells = document.querySelectorAll(".grid-cell");
-const integerDropdown = document.getElementById("numberOfFiles");
-const finalizeButton = document.getElementById("finalize");
-
-finalizeButton.addEventListener("click", () => {
-  const numDivsToLoop = parseInt(integerDropdown.value);
-
-  for (let i = 0; i < numDivsToLoop; i++) {
-    const gridCell = gridCells[i];
-    html2canvas(gridCell, { dpi: 300, scale: 3 }).then((canvas) => {
-      const downloadLink = document.createElement("a");
-      downloadLink.href = canvas.toDataURL("image/jpeg");
-      downloadLink.download = `blog-${i}.jpg`;
-      downloadLink.click();
-    });
-  }
-});
-
-// bg baslik tpocg lonca
 const wbg = document.getElementById("wbg");
-const bbg = document.getElementById("bbg");
-
-const wbaslik = document.getElementById("wbaslik");
-const bbaslik = document.getElementById("bbaslik");
-
-const wt = document.getElementById("wt");
-const bt = document.getElementById("bt");
-
-const wl = document.getElementById("wl");
-const bl = document.getElementById("bl");
-
 wbg.addEventListener("click", () => {
   wbg.classList.add("clicked");
   bbg.classList.remove("clicked");
@@ -126,6 +93,7 @@ wbg.addEventListener("click", () => {
   }
 });
 
+const bbg = document.getElementById("bbg");
 bbg.addEventListener("click", () => {
   bbg.classList.add("clicked");
   wbg.classList.remove("clicked");
@@ -148,6 +116,7 @@ bbg.addEventListener("click", () => {
   }
 });
 
+const wbaslik = document.getElementById("wbaslik");
 wbaslik.addEventListener("click", () => {
   wbaslik.classList.add("clicked");
   bbaslik.classList.remove("clicked");
@@ -166,6 +135,7 @@ wbaslik.addEventListener("click", () => {
   }
 });
 
+const bbaslik = document.getElementById("bbaslik");
 bbaslik.addEventListener("click", () => {
   bbaslik.classList.add("clicked");
   wbaslik.classList.remove("clicked");
@@ -184,6 +154,7 @@ bbaslik.addEventListener("click", () => {
   }
 });
 
+const wt = document.getElementById("wt");
 wt.addEventListener("click", () => {
   wt.classList.add("clicked");
   bt.classList.remove("clicked");
@@ -202,6 +173,7 @@ wt.addEventListener("click", () => {
   }
 });
 
+const bt = document.getElementById("bt");
 bt.addEventListener("click", () => {
   bt.classList.add("clicked");
   wt.classList.remove("clicked");
@@ -220,6 +192,7 @@ bt.addEventListener("click", () => {
   }
 });
 
+const wl = document.getElementById("wl");
 wl.addEventListener("click", () => {
   wl.classList.add("clicked");
   bl.classList.remove("clicked");
@@ -238,6 +211,7 @@ wl.addEventListener("click", () => {
   }
 });
 
+const bl = document.getElementById("bl");
 bl.addEventListener("click", () => {
   bl.classList.add("clicked");
   wl.classList.remove("clicked");
@@ -256,8 +230,6 @@ bl.addEventListener("click", () => {
   }
 });
 
-//Başlık Kapak
-
 function addBaslikText() {
   const baslikInput = document.getElementById("baslik-text").value;
   const baslikOutput = document.createElement("div");
@@ -273,7 +245,6 @@ function addBaslikText() {
   }
 }
 
-//Yazar Kapak
 function addYazarText() {
   const yazarInput = document.getElementById("yazar-text").value;
   const yazarOutput = document.createElement("div");
@@ -289,8 +260,6 @@ function addYazarText() {
   }
 }
 
-// Metin gir
-
 function addMetinText() {
   const metinButton = document.getElementById("metin-text");
   const baslikInput = document.getElementById("baslik-text").value;
@@ -298,32 +267,32 @@ function addMetinText() {
   if (cells[1].querySelector(".metinplaced") == null) {
     for (let i = 1; i < cells.length; i++) {
       const cell = cells[i];
-      // if (cell.querySelector(".bgplaced") !== null) {
-        const metinText = document.createElement("div");
-        metinText.classList.add("metinplaced");
-        metinText.innerText = "Yazı buraya gelecek.";
-        metinText.setAttribute("contenteditable", "true");
-        metinText.setAttribute("id", "metinText");
-        cell.appendChild(metinText);
-        if (cell.querySelector("#BBGID") !== null) {
-          metinText.classList.add("whitetext");
-        }
-      // } else {
-      //   metinButton.innerHTML =
-      //     "<span class='error'> Önce arka plan rengi seç! <span>";
-      //   setTimeout(() => {
-      //     metinButton.innerHTML = "Metin gir.";
-      //   }, 1500);
-      // }
+      
+      const metinText = document.createElement("div");
+      metinText.classList.add("metinplaced");
+      metinText.innerText = "Yazı buraya gelecek.";
+      metinText.setAttribute("contenteditable", "true");
+      metinText.setAttribute("id", "metinText");
+      cell.appendChild(metinText);
+      if (cell.querySelector("#BBGID") !== null) {
+        metinText.classList.add("whitetext");
+      }
     }
     const baslikText = document.createElement("span");
     baslikText.classList.add("oneri-baslik");
-    baslikText.innerText = baslikInput;
+    if (baslikInput == "") {
+      baslikText.innerText = "Başlık girmeyi unuttun...";
+    } else {
+      baslikText.innerText = baslikInput;
+    }
+
     baslikText.setAttribute("contenteditable", "true");
-    cells[1].appendChild(baslikText);
+
     if (cells[1].querySelector("#BBGID") !== null) {
       baslikText.classList.add("whitetext");
     }
+
+    cells[1].appendChild(baslikText);
   } else {
     metinButton.innerHTML =
       "<span class='error'> Yazıya tıkla ve düzenle! <span>";
@@ -358,19 +327,11 @@ function addMetinText() {
   }
 }
 
-const slideSection = document.getElementById("phonewarning");
 const slideButton = document.getElementById("slideButton");
-
 slideButton.addEventListener("click", () => {
+  const slideSection = document.getElementById("phonewarning");
   slideSection.style.display = "none";
 });
-
-const tutorialOpenBtn = document.getElementById("tut-show");
-const tutorialCloseBtn = document.getElementById("tut-close");
-const tutorialNextBtn = document.getElementById("tut-next");
-const tutorialSection = document.getElementById("tutorialSection");
-const tutorialWrap = document.getElementById("tutorial-wrap");
-const tutorialText = document.getElementById("tutorialText");
 
 const textContentArray = [
   "Merhaba, blog makinesine hoşgeldin. Bu baloncuk ile siteyi nasıl kullanacağını öğreneceksin. <br>Baloncuğu kapatmak için sol üstteki çarpıya tıkla. <br>Bir sonraki adım için çarpının yanındaki oka tıkla. <br>",
@@ -381,12 +342,17 @@ const textContentArray = [
   "Önceki adımları sorunsuz geçtikten sonra 'Metin gir.' yazılı tuşa tıklayıp blog içeriğini yerleştirmeye başlayabilirsin.<br><br><b>Not: </b>Yazıları aşağıdaki görseller üzerinde düzenleyeceksin.",
   "Son adım olarak '(Sayfa Sayısı Seç)' yazan menüden tasarımın kaç sayfa olduğunu seçip altındaki 'Yazdır!' tuşu ile bitirebilirsin.<br><br>Kolay gelsin hocam :)",
 ];
+
 let currentTextIndex = 0;
 let isMoved = false;
-
 let currentPositionIndex = 0;
 const positions = [68, 140, 384, 744, 984, 984];
 
+const tutorialSection = document.getElementById("tutorialSection");
+const tutorialWrap = document.getElementById("tutorial-wrap");
+const tutorialText = document.getElementById("tutorialText");
+
+const tutorialNextBtn = document.getElementById("tut-next");
 tutorialNextBtn.addEventListener("click", () => {
   currentTextIndex = (currentTextIndex + 1) % textContentArray.length;
   tutorialText.style.opacity = 0;
@@ -405,6 +371,7 @@ tutorialNextBtn.addEventListener("click", () => {
   }
 });
 
+const tutorialCloseBtn = document.getElementById("tut-close");
 tutorialCloseBtn.addEventListener("click", () => {
   tutorialSection.style.display = "none";
   currentPositionIndex = 0;
@@ -412,6 +379,7 @@ tutorialCloseBtn.addEventListener("click", () => {
   tutorialOpenBtn.style.display = "block";
 });
 
+const tutorialOpenBtn = document.getElementById("tut-show");
 tutorialOpenBtn.addEventListener("click", () => {
   tutorialSection.style.display = "block";
   tutorialWrap.style.left = "60px";
@@ -419,6 +387,7 @@ tutorialOpenBtn.addEventListener("click", () => {
   tutorialOpenBtn.style.display = "none";
 });
 
+const resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", () => {
   for (let i = 0; i < cells.length; i++) {
     const cell = cells[i];
@@ -432,5 +401,22 @@ resetBtn.addEventListener("click", () => {
     wl.classList.remove("clicked");
     bt.classList.remove("clicked");
     resetBtn.style.display = "none";
+  }
+});
+
+const finalizeButton = document.getElementById("finalize");
+finalizeButton.addEventListener("click", () => {
+  const integerInput = document.getElementById("numberOfFiles").value;
+  console.log(integerInput);
+  const numDivsToLoop = parseInt(integerInput);
+
+  for (let i = 1; i <= numDivsToLoop; i++) {
+    const cell = cells[i];
+    html2canvas(cell, { dpi: 300, scale: 3 }).then((canvas) => {
+      const downloadLink = document.createElement("a");
+      downloadLink.href = canvas.toDataURL("image/jpeg");
+      downloadLink.download = `blog-${i}.jpg`;
+      downloadLink.click();
+    });
   }
 });
