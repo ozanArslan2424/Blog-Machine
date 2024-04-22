@@ -18,9 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
         rel="stylesheet">
-
 </head>
-
+    
 <body>
     <header id="header">
         <img id="headerImgTwo" src="./images/all/SVG/headerimg2.svg" />
@@ -28,22 +27,24 @@
             <i>Created by <a id="OzanArslanWeb" href="#">Ozan Arslan</a>, for TPÖÇG use only. </i>&#169; 2023
         </p>
     </header>
-
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Hoşgeldiniz!</h2>
+            <p>Kullanmaya çalıştığınız uygulamanın yeni versiyonu çıktı!</p>
+            <p>Bu site yalnızca gösterim amaçlıdır lütfen yeni versiyonu kullanın.</p>
+            <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn switch">Yeni siteye git!</a>
+        </div>
+    </div>
     <nav id="nav">
         <div class="navbar one">
             <a href="https://www.tpocg.org/" alt="TPÖÇG Web Sitesi" class="btn out">TPÖÇG</a>
-            <a href="http://psinossa.tpocg.org/" alt="PsiNossa Dergi Web Sitesi" class="btn out">PsiNossa</a>
             <a href="https://www.tpocg.org/blog/" alt="Akıl Defterim Blog Web Sitesi" class="btn out">Akıl Defterim</a>
-        </div>
-        <div class="navbar two">
             <a href="index.html" class="btn switch var2" id="blog">Akıl Defterim Tasarlayıcı</a>
+            <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn">Yeni siteye git!</a>
         </div>
-        <h4>Görselleri indirmek için kullanılan programda bir sıkıntı var, şimdilik ss alarak kullanmaya devam edebilirsiniz.</h4>
-        <h4>İleride sorun çözülecek.</h4>
     </nav>
-
     <hr />
-
     <section id="buttons-monthly">
         <label for="uploadImgOne">
             <div class="upload-img-lbl midbtn rounded">
@@ -53,7 +54,6 @@
             </div>
         </label>
         <input class="invis" type="file" id="uploadImgOne" accept="image/*" />
-
         <label for="uploadImgTwo">
             <div class="upload-img-lbl midbtn rounded">
                 Dinle Görseli
@@ -62,7 +62,6 @@
             </div>
         </label>
         <input class="invis" type="file" id="uploadImgTwo" accept="image/*" />
-
         <label for="uploadImgThree">
             <div class="upload-img-lbl midbtn rounded">
                 İzle Görseli
@@ -71,7 +70,6 @@
             </div>
         </label>
         <input class="invis" type="file" id="uploadImgThree" accept="image/*" />
-
         <div id="final" class="midbtn vertical nogap">
             <select name="numberOfFiles" id="numberOfFiles" class="select white">
                 <option value="0">(Sayfa Sayısı Seç)</option>
@@ -87,7 +85,6 @@
             <button id="finalize" class="yazdir">YAZDIR!</button>
         </div>
     </section>
-
     <section id="previews" class="forMach2">
         <div id="preview-grid">
             <div id="oneriGridOne" class="oneri grid-cell first">
@@ -102,62 +99,43 @@
                     </div>
                 </div>
             </div>
-
             <div id="oneriGridTwo" class="oneri grid-cell">
-
                 <span class="oneri-baslik">Ayın Önerileri</span>
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridThree" class="oneri grid-cell">
-
                 <span class="oneri-baslik" contenteditable="true">Oku: (başlık)</span>
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridFour" class="oneri grid-cell">
-
                 <span class="oneri-baslik" contenteditable="true">Dinle:(başlık)</span>
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridFive" class="oneri grid-cell">
-
                 <span class="oneri-baslik" contenteditable="true">İzle: (başlık)</span>
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridSix" class="oneri grid-cell">
-
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridSeven" class="oneri grid-cell">
-
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridEight" class="oneri grid-cell">
-
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
                 </div>
-
             </div>
             <div id="oneriGridNine" class="oneri grid-cell">
-
                 <div class="oneri-metin" contenteditable="true">Yazı buraya gelecek...
-
                 </div>
-
             </div>
         </div>
     </section>
 </body>
-
 </html>
