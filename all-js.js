@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 var uploaded = true;
 const cells = document.getElementsByClassName("grid-cell");
-// const gridCells = document.querySelectorAll(".grid-cell");
 
 function handleImageUpload(event) {
   const file = event.target.files[0];
@@ -38,7 +37,7 @@ function displayImage(imageUrl) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   const imageUpload1 = document.getElementById("uploadImgOne");
   const imageUpload2 = document.getElementById("uploadImgTwo");
   const imageUpload3 = document.getElementById("uploadImgThree");
@@ -267,7 +266,7 @@ function addMetinText() {
   if (cells[1].querySelector(".metinplaced") == null) {
     for (let i = 1; i < cells.length; i++) {
       const cell = cells[i];
-      
+
       const metinText = document.createElement("div");
       metinText.classList.add("metinplaced");
       metinText.innerText = "Yazı buraya gelecek.";
@@ -312,16 +311,13 @@ function addMetinText() {
     metinTextArray.addEventListener("paste", function (e) {
       e.preventDefault();
 
-      // Get the pasted text without formatting
       const clipboardData = e.clipboardData || window.clipboardData;
       const pastedText = clipboardData.getData("text/plain");
 
-      // Replace special characters and keep line breaks
       const cleanedText = pastedText.replace(/[^\r\n\s]+/g, function (match) {
         return match.replace(/[]/g, "");
       });
 
-      // Insert the cleaned text into the contenteditable element
       document.execCommand("insertText", false, cleanedText);
     });
   }
@@ -420,3 +416,24 @@ finalizeButton.addEventListener("click", () => {
     });
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  showModal();
+})
+
+function showModal() {
+  var modal = document.getElementById("modal");
+  modal.style.display = "block";
+
+  var closeButton = document.getElementsByClassName("modal-close")[0];
+  closeButton.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
