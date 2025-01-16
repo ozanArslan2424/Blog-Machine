@@ -101,8 +101,10 @@ body {
   padding: 0.8rem 1rem;
   background: var(--bubble-color);
   border-radius: 0.25rem;
-  box-shadow: 0.125rem 0.125rem 0rem 0.125rem var(--border-color), -0.125rem 0.125rem 0rem 0.125rem var(--border-color),
-    0.125rem -0.125rem 0rem 0.125rem var(--border-color), -0.125rem -0.125rem 0rem 0.125rem var(--border-color);
+  box-shadow: 0.125rem 0.125rem 0rem 0.125rem var(--border-color),
+    -0.125rem 0.125rem 0rem 0.125rem var(--border-color),
+    0.125rem -0.125rem 0rem 0.125rem var(--border-color),
+    -0.125rem -0.125rem 0rem 0.125rem var(--border-color);
 }
 
 .tut-bubble p {

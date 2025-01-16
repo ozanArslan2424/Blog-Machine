@@ -37,7 +37,6 @@ function displayImage(imageUrl) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const imageUpload1 = document.getElementById("uploadImgOne");
   const imageUpload2 = document.getElementById("uploadImgTwo");
   const imageUpload3 = document.getElementById("uploadImgThree");
@@ -293,8 +292,7 @@ function addMetinText() {
 
     cells[1].appendChild(baslikText);
   } else {
-    metinButton.innerHTML =
-      "<span class='error'> Yazıya tıkla ve düzenle! <span>";
+    metinButton.innerHTML = "<span class='error'> Yazıya tıkla ve düzenle! <span>";
     setTimeout(() => {
       metinButton.innerHTML = "Metin gir.";
     }, 1500);
@@ -417,10 +415,9 @@ finalizeButton.addEventListener("click", () => {
   }
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   showModal();
-})
+});
 
 function showModal() {
   var modal = document.getElementById("modal");
@@ -429,11 +426,11 @@ function showModal() {
   var closeButton = document.getElementsByClassName("modal-close")[0];
   closeButton.onclick = function () {
     modal.style.display = "none";
-  }
+  };
 
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+  };
 }
