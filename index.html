@@ -1,146 +1,191 @@
 <!DOCTYPE html>
 <html lang="tr">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Ozan Arslan" />
-    <meta name="description"
-        content="TPÖÇG Yayın Tasarım Ekibi'ni blog denen beladan kurtarmak için tasarlanan bir web uygulaması." />
+    <meta
+      name="description"
+      content="TPÖÇG Yayın Tasarım Ekibi'ni blog denen beladan kurtarmak için tasarlanan bir web uygulaması."
+    />
     <title>Blog Tasarım Makinesi</title>
     <link rel="icon" href="./images/weblogo.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="all-css.css" />
-    <script src="all-js.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
     <script src="https://kit.fontawesome.com/ffbc15d7cd.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.cdnfonts.com/css/cronus" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-        rel="stylesheet">
-</head>
+    <link href="https://fonts.cdnfonts.com/css/cronus" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <button id="tut-show">Öğretici'yi aç.</button>
     <button id="reset">Sıfırla.</button>
     <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2>Hoşgeldiniz!</h2>
-            <p>Kullanmaya çalıştığınız uygulamanın yeni versiyonu çıktı!</p>
-            <p>Bu site yalnızca gösterim amaçlıdır lütfen yeni versiyonu kullanın.</p>
-            <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn switch">Yeni siteye git!</a>
-        </div>
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2>Hoşgeldiniz!</h2>
+        <p>Kullanmaya çalıştığınız uygulamanın yeni versiyonu çıktı!</p>
+        <p>Bu site yalnızca gösterim amaçlıdır lütfen yeni versiyonu kullanın.</p>
+        <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn switch"
+          >Yeni siteye git!</a
+        >
+      </div>
     </div>
     <section id="phonewarning">
-        <div class="nophones-screen">
-            <h1 class="nophones-h1">Dikkat!</h1>
-            <p class="nophones-p">Bu site her ne kadar telefon ekranına uygun olacak şekilde düzenlenmiş olsa da
-                kullanılan eklentiler telefonunuzda çalışmayacaktır.
-                <br>
-                <br>
-                Çalışmalarınızın boşa gitmemesi için lütfen tasarım yapmak için yalnızca <b>bilgisayarınızı</b> kullanın
-            </p>
-            <button class="nophones-okbtn" id="slideButton">Anladım.</button>
-        </div>
+      <div class="nophones-screen">
+        <h1 class="nophones-h1">Dikkat!</h1>
+        <p class="nophones-p">
+          Bu site her ne kadar telefon ekranına uygun olacak şekilde düzenlenmiş olsa da kullanılan
+          eklentiler telefonunuzda çalışmayacaktır.
+          <br />
+          <br />
+          Çalışmalarınızın boşa gitmemesi için lütfen tasarım yapmak için yalnızca
+          <b>bilgisayarınızı</b> kullanın
+        </p>
+        <button class="nophones-okbtn" id="slideButton">Anladım.</button>
+      </div>
     </section>
     <header id="header">
-        <img id="headerImgOne" alt="header" src="./images/all/SVG/headerimg1.svg" />
-        <p id="credits">
-            <i><a id="OzanArslanWeb" href="#">Ozan Arslan</a>, for TPÖÇG.</i>&#169; 2023
-        </p>
+      <img id="headerImgOne" alt="header" src="./images/all/SVG/headerimg1.svg" />
+      <p id="credits">
+        <i><a id="OzanArslanWeb" href="#">Ozan Arslan</a>, for TPÖÇG.</i>&#169; 2023
+      </p>
     </header>
     <nav id="nav">
-        <div class="navbar one">
-            <a href="https://www.tpocg.org/" alt="TPÖÇG Web Sitesi" class="btn out">TPÖÇG</a>
-            <a href="https://www.tpocg.org/blog/" alt="Akıl Defterim Blog Web Sitesi" class="btn out">Akıl Defterim</a>
-            <a href="machine2.html" class="btn switch var1" id="oneriler">Ayın Önerileri Tasarlayıcı</a>
-            <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn">Yeni siteye git!</a>
-        </div>
+      <div class="navbar one">
+        <a href="https://www.tpocg.org/" alt="TPÖÇG Web Sitesi" class="btn out">TPÖÇG</a>
+        <a href="https://www.tpocg.org/blog/" alt="Akıl Defterim Blog Web Sitesi" class="btn out"
+          >Akıl Defterim</a
+        >
+        <a href="machine2.html" class="btn switch var1" id="oneriler">Ayın Önerileri Tasarlayıcı</a>
+        <a href="https://ozanarslan2424.github.io/blogmachine-v2/" class="btn">Yeni siteye git!</a>
+      </div>
     </nav>
-    <hr>
+    <hr />
     <section id="buttons">
-        <div class="horizontal">
-            <div class="upload-img-bg rounded">
-                <label id="uploadLabel" class="rounded red" for="uploadImgBg"><i id="upload-icon"
-                        class="fa-solid fa-upload" style="color: #ffffff;"></i><br>Görsel<br>Seç</label>
-                <input class="invis" type="file" name="uploadImgBg" id="uploadImgBg" accept="image/*"
-                    onchange="handleImageUpload(event)" />
-            </div>
-            <div class="vertical">
-                <button class="smallbtn rounded white" id="wbg"></button>
-                <button class="smallbtn rounded black" id="bbg"></button>
-            </div>
-            <div class="vertical">
-                <button class="bigbtn white rounded" id="bbaslik"></button>
-                <button class="bigbtn black rounded" id="wbaslik"></button>
-            </div>
-            <div class="vertical">
-                <button class="smallbtn white rounded" id="bt"></button>
-                <button class="smallbtn black rounded" id="wt"></button>
-            </div>
-            <div class="vertical">
-                <button class="smallbtn white rounded" id="bl"></button>
-                <button class="smallbtn black rounded" id="wl"></button>
-            </div>
+      <div class="horizontal">
+        <div class="upload-img-bg rounded">
+          <label id="uploadLabel" class="rounded red" for="uploadImgBg"
+            ><i id="upload-icon" class="fa-solid fa-upload" style="color: #ffffff"></i
+            ><br />Görsel<br />Seç</label
+          >
+          <input
+            class="invis"
+            type="file"
+            name="uploadImgBg"
+            id="uploadImgBg"
+            accept="image/*"
+            onchange="handleImageUpload(event)"
+          />
         </div>
-        <div class="horizontal">
-            <div class="vertical">
-                <div class="horizontal nogap">
-                    <input type="text" class="bigbigbtn white rounded" id="baslik-text" placeholder="Başlık" />
-                    <input type="button" class="apply red rounded" id="apply-baslik" onclick="addBaslikText()" />
-                </div>
-                <div class="horizontal nogap">
-                    <input type="text" class="bigbigbtn white rounded" id="yazar-text" placeholder="Yazar" />
-                    <input type="button" class="apply red rounded" id="apply-yazar" onclick="addYazarText()" />
-                </div>
-            </div>
-            <div class="vertical">
-                <button class="midbtn metingir white rounded" id="metin-text" onclick="addMetinText()">
-                    Metin gir.
-                </button>
+        <div class="vertical">
+          <button class="smallbtn rounded white" id="wbg"></button>
+          <button class="smallbtn rounded black" id="bbg"></button>
+        </div>
+        <div class="vertical">
+          <button class="bigbtn white rounded" id="bbaslik"></button>
+          <button class="bigbtn black rounded" id="wbaslik"></button>
+        </div>
+        <div class="vertical">
+          <button class="smallbtn white rounded" id="bt"></button>
+          <button class="smallbtn black rounded" id="wt"></button>
+        </div>
+        <div class="vertical">
+          <button class="smallbtn white rounded" id="bl"></button>
+          <button class="smallbtn black rounded" id="wl"></button>
+        </div>
+      </div>
+      <div class="horizontal">
+        <div class="vertical">
+          <div class="horizontal nogap">
+            <input
+              type="text"
+              class="bigbigbtn white rounded"
+              id="baslik-text"
+              placeholder="Başlık"
+            />
+            <input
+              type="button"
+              class="apply red rounded"
+              id="apply-baslik"
+              onclick="addBaslikText()"
+            />
+          </div>
+          <div class="horizontal nogap">
+            <input
+              type="text"
+              class="bigbigbtn white rounded"
+              id="yazar-text"
+              placeholder="Yazar"
+            />
+            <input
+              type="button"
+              class="apply red rounded"
+              id="apply-yazar"
+              onclick="addYazarText()"
+            />
+          </div>
+        </div>
+        <div class="vertical">
+          <button class="midbtn metingir white rounded" id="metin-text" onclick="addMetinText()">
+            Metin gir.
+          </button>
 
-                <div id="final" class="midbtn vertical nogap">
-                    <input type="number" name="numberOfFiles" id="numberOfFiles" class="select white"
-                        placeholder="Sayfa sayısı seç:" min="1" max="8">
-                    <button id="finalize" class="yazdir">YAZDIR!</button>
-                </div>
-            </div>
+          <div id="final" class="midbtn vertical nogap">
+            <input
+              type="number"
+              name="numberOfFiles"
+              id="numberOfFiles"
+              class="select white"
+              placeholder="Sayfa sayısı seç:"
+              min="1"
+              max="8"
+            />
+            <button id="finalize" class="yazdir">YAZDIR!</button>
+          </div>
         </div>
+      </div>
     </section>
     <section id="tutorialSection">
-        <div id="tutorial-wrap">
-            <div class="tut-buttons">
-                <button id="tut-close" title="Öğretici tanıtımı kapat.">X</button>
-                <button id="tut-next"><i class="arrow-right"></i></button>
-            </div>
-            <div id="tutorial">
-                <div class="tut-bubble">
-                    <p class="tut-text" id="tutorialText">
-                        Merhaba, blog makinesine hoşgeldin. Bu baloncuk ile siteyi nasıl kullanacağını öğreneceksin.
-                        <br>
-                        Baloncuğu kapatmak için sol üstteki çarpıya tıkla. <br>
-                        Bir sonraki adım için çarpının yanındaki oka tıkla. <br>
-                    </p>
-                </div>
-                <div class="tut-handle"></div>
-            </div>
+      <div id="tutorial-wrap">
+        <div class="tut-buttons">
+          <button id="tut-close" title="Öğretici tanıtımı kapat.">X</button>
+          <button id="tut-next"><i class="arrow-right"></i></button>
         </div>
+        <div id="tutorial">
+          <div class="tut-bubble">
+            <p class="tut-text" id="tutorialText">
+              Merhaba, blog makinesine hoşgeldin. Bu baloncuk ile siteyi nasıl kullanacağını
+              öğreneceksin.
+              <br />
+              Baloncuğu kapatmak için sol üstteki çarpıya tıkla. <br />
+              Bir sonraki adım için çarpının yanındaki oka tıkla. <br />
+            </p>
+          </div>
+          <div class="tut-handle"></div>
+        </div>
+      </div>
     </section>
     <section id="previews" class="forIndex">
-        <div class="grid-wrap">
-            <div id="preview-grid">
-                <div class="grid-cell" id="gridOne"></div>
-                <div class="grid-cell" id="gridTwo"></div>
-                <div class="grid-cell" id="gridThree"></div>
-                <div class="grid-cell" id="gridFour"></div>
-                <div class="grid-cell" id="gridFive"></div>
-                <div class="grid-cell" id="gridSix"></div>
-                <div class="grid-cell" id="gridSeven"></div>
-                <div class="grid-cell" id="gridEight"></div>
-                <div class="grid-cell" id="gridNine"></div>
-            </div>
+      <div class="grid-wrap">
+        <div id="preview-grid">
+          <div class="grid-cell" id="gridOne"></div>
+          <div class="grid-cell" id="gridTwo"></div>
+          <div class="grid-cell" id="gridThree"></div>
+          <div class="grid-cell" id="gridFour"></div>
+          <div class="grid-cell" id="gridFive"></div>
+          <div class="grid-cell" id="gridSix"></div>
+          <div class="grid-cell" id="gridSeven"></div>
+          <div class="grid-cell" id="gridEight"></div>
+          <div class="grid-cell" id="gridNine"></div>
         </div>
+      </div>
     </section>
-</body>
+  </body>
 </html>
